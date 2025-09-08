@@ -11,6 +11,8 @@ import { jobs, type Job } from '@/lib/job-data';
 import { JobCard } from '@/components/landing/job-card';
 import { Bot, BarChart, FileText, Briefcase, Calendar, MessageSquare, Settings } from 'lucide-react';
 import Link from 'next/link';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
 
 const toolkits = [
     { name: 'AI Content Genie', icon: <Bot />, href: '#' },
@@ -50,16 +52,25 @@ export default function ForCreatorsPage() {
                     <CardDescription>Leverage our AI-powered tools to grow your brand.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <div className="flex items-center justify-between text-center">
-                        {toolkits.map(tool => (
-                             <Link href={tool.href} key={tool.name}>
-                                <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer w-24">
-                                    <div className="h-8 w-8">{tool.icon}</div>
-                                    <span className="text-xs font-semibold">{tool.name}</span>
-                                </div>
-                            </Link>
-                        ))}
-                    </div>
+                    <TooltipProvider>
+                        <div className="flex items-center justify-between text-center">
+                            {toolkits.map(tool => (
+                                <Tooltip key={tool.name}>
+                                    <TooltipTrigger asChild>
+                                        <Link href={tool.href}>
+                                            <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer w-24">
+                                                <div className="h-8 w-8">{tool.icon}</div>
+                                                <span className="text-xs font-semibold">{tool.name}</span>
+                                            </div>
+                                        </Link>
+                                    </TooltipTrigger>
+                                    <TooltipContent>
+                                        <p>{tool.name}</p>
+                                    </TooltipContent>
+                                </Tooltip>
+                            ))}
+                        </div>
+                    </TooltipProvider>
                 </CardContent>
             </Card>
 
