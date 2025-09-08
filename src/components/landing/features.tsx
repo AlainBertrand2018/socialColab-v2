@@ -73,7 +73,8 @@ const BenefitCard = ({ image, dataAiHint, title, description, alt }: { image: st
 
 export function Features() {
   return (
-    <section id="showcase" className="py-24 sm:py-32 bg-secondary">
+    <section id="showcase" className="py-24 sm:py-32 bg-secondary relative overflow-hidden">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[30rem] w-[30rem] bg-accent/10 rounded-full blur-3xl -z-10"></div>
       <div className="container">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
