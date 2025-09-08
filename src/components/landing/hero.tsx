@@ -32,7 +32,7 @@ export function Hero() {
 
         <div className="mt-8 space-y-4 md:space-y-0 md:space-x-4">
           <Button className="w-full md:w-auto" size="lg" asChild>
-            <Link href="/onboarding">Get Started Free</Link>
+            <Link href="/onboarding" target="_blank" rel="noopener noreferrer">Get Started Free</Link>
           </Button>
           <Button variant="outline" className="w-full md:w-auto" size="lg" asChild>
             <Link href="#features">
