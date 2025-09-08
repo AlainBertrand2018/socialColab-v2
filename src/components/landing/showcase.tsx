@@ -1,3 +1,6 @@
+
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { creators, CreatorProfile } from '@/lib/creator-data';
@@ -31,7 +34,7 @@ export const CreatorCard = ({ creator }: { creator: CreatorProfile }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
           <div className="absolute bottom-0 left-0 p-4 text-white">
             <h3 className="text-xl font-bold font-headline">{creator.name}</h3>
-            <p className="text-sm">{creator.niche}</p>
+            <div className="text-sm">{creator.niche}</div>
           </div>
         </div>
       </Link>
@@ -64,9 +67,9 @@ export function Showcase() {
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Meet Our Vetted Creators
             </h2>
-            <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
+            <div className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
                 Discover talented individuals ready to bring your brand's story to life.
-            </p>
+            </div>
         </div>
 
         <div className="container">
