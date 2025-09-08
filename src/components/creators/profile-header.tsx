@@ -6,8 +6,14 @@ import type { CreatorProfile } from '@/lib/creator-data';
 export function ProfileHeader({ creator }: { creator: CreatorProfile }) {
   return (
     <Card className="overflow-hidden">
-      <div className="h-48 bg-gradient-to-r from-primary/10 to-accent/10 relative">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 bg-primary/20 rounded-full blur-3xl -z-10"></div>
+      <div className="relative h-48 w-full">
+        <Image
+          src="https://picsum.photos/1200/400"
+          alt="Cover image"
+          data-ai-hint="abstract background"
+          fill
+          className="object-cover"
+        />
       </div>
       <div className="px-6 pb-6">
         <div className="flex items-end -mt-20">
