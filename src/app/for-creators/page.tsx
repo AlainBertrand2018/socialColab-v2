@@ -10,17 +10,17 @@ import { CreatorCard } from "@/components/landing/creator-card";
 import { jobs, type Job } from '@/lib/job-data';
 import { JobCard } from '@/components/landing/job-card';
 
-// Shuffle jobs once outside the component
-const shuffledJobs = [...jobs].sort(() => 0.5 - Math.random());
-
 export default function ForCreatorsPage() {
     const [handle, setHandle] = useState('Creator');
+    const [showcasedJobs, setShowcasedJobs] = useState<Job[]>([]);
     const showcasedCreators = creators.slice(0, 3);
-    const showcasedJobs = shuffledJobs.slice(0, 4);
 
     useEffect(() => {
         const randomCreator = creators[Math.floor(Math.random() * creators.length)];
         setHandle(randomCreator.socialPseudonym);
+
+        const shuffledJobs = [...jobs].sort(() => 0.5 - Math.random());
+        setShowcasedJobs(shuffledJobs.slice(0, 4));
     }, []);
 
   return (
