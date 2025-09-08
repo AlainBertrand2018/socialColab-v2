@@ -1,6 +1,8 @@
+
 export type CreatorProfile = {
   id: number;
   name: string;
+  socialPseudonym: string;
   avatar: string;
   avatarAiHint: string;
   age: number;
@@ -34,6 +36,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 1,
     name: 'Anaelle Dubois',
+    socialPseudonym: 'anaelledubois',
     avatar: 'https://picsum.photos/id/1027/200',
     avatarAiHint: 'portrait woman',
     age: 28,
@@ -61,6 +64,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 2,
     name: 'Kenji Tanaka',
+    socialPseudonym: 'kenjisky',
     avatar: 'https://picsum.photos/id/1005/200',
     avatarAiHint: 'portrait man',
     age: 32,
@@ -89,6 +93,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 3,
     name: 'Priya Sharma',
+    socialPseudonym: 'priyaseats',
     avatar: 'https://picsum.photos/id/1011/200',
     avatarAiHint: 'portrait indian woman',
     age: 25,
@@ -116,6 +121,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 4,
     name: 'David Lagesse',
+    socialPseudonym: 'davidkites',
     avatar: 'https://picsum.photos/id/1012/200',
     avatarAiHint: 'portrait man surfing',
     age: 29,
@@ -145,6 +151,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 5,
     name: 'Chloé Rose',
+    socialPseudonym: 'chloeflows',
     avatar: 'https://picsum.photos/id/1013/200',
     avatarAiHint: 'portrait woman yoga',
     age: 34,
@@ -172,6 +179,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 6,
     name: 'Samuel Piron',
+    socialPseudonym: 'samuelpaints',
     avatar: 'https://picsum.photos/id/1014/200',
     avatarAiHint: 'portrait artist',
     age: 45,
@@ -199,6 +207,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 7,
     name: 'Jade Li',
+    socialPseudonym: 'jadeplays',
     avatar: 'https://picsum.photos/id/1023/200',
     avatarAiHint: 'portrait asian woman',
     age: 22,
@@ -226,6 +235,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 8,
     name: 'Olivier Martin',
+    socialPseudonym: 'olivierhikes',
     avatar: 'https://picsum.photos/id/1025/200',
     avatarAiHint: 'portrait man hiking',
     age: 38,
@@ -253,6 +263,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 9,
     name: 'Noemie Aliphon',
+    socialPseudonym: 'noemiebeauty',
     avatar: 'https://picsum.photos/id/201/200',
     avatarAiHint: 'portrait woman makeup',
     age: 26,
@@ -280,6 +291,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 10,
     name: 'Alexandre Duval',
+    socialPseudonym: 'alexfinance',
     avatar: 'https://picsum.photos/id/305/200',
     avatarAiHint: 'portrait man business',
     age: 42,
@@ -307,6 +319,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 11,
     name: 'Laura Begue',
+    socialPseudonym: 'laurasfamily',
     avatar: 'https://picsum.photos/id/333/200',
     avatarAiHint: 'portrait woman family',
     age: 35,
@@ -334,6 +347,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 12,
     name: 'Julien Laurent',
+    socialPseudonym: 'juliensounds',
     avatar: 'https://picsum.photos/id/431/200',
     avatarAiHint: 'portrait musician',
     age: 27,
@@ -361,6 +375,7 @@ export const creators: CreatorProfile[] = [
    {
     id: 13,
     name: 'Emilie de la Roche',
+    socialPseudonym: 'emilierides',
     avatar: 'https://picsum.photos/id/567/200',
     avatarAiHint: 'portrait woman horse',
     age: 29,
@@ -388,6 +403,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 14,
     name: 'Kevin Gopal',
+    socialPseudonym: 'kevinfit',
     avatar: 'https://picsum.photos/id/64/200',
     avatarAiHint: 'portrait man fitness',
     age: 31,
@@ -415,6 +431,7 @@ export const creators: CreatorProfile[] = [
   {
     id: 15,
     name: 'Celine Wong',
+    socialPseudonym: 'celinedesigns',
     avatar: 'https://picsum.photos/id/77/200',
     avatarAiHint: 'portrait woman business',
     age: 39,
