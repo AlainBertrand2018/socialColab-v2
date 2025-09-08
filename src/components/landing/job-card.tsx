@@ -5,7 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Separator } from "@/components/ui/separator";
 import type { Job } from "@/lib/job-data";
 import { DollarSign, Tag } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { CampaignBrief } from "../brands/campaign-brief";
 
 
@@ -46,6 +46,9 @@ export function JobCard({ job }: { job: Job }) {
                 </Card>
             </DialogTrigger>
             <DialogContent className="max-w-3xl">
+                <DialogHeader>
+                    <DialogTitle className="sr-only">{job.title}</DialogTitle>
+                </DialogHeader>
                 <CampaignBrief />
             </DialogContent>
         </Dialog>
