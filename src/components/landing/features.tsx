@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
@@ -13,7 +14,7 @@ const brandBenefits = [
     description: 'Stop guessing. Our intelligent algorithm connects you with influencers whose audience perfectly matches your target demographic.',
   },
   {
-    image: 'https://picsum.photos/400/251',
+    image: '/images/socialColab_from_Start.webp',
     dataAiHint: 'team collaboration',
     alt: 'Illustration of team collaboration',
     title: 'Seamless Campaign Management',
