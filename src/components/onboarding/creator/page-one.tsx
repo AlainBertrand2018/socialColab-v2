@@ -14,9 +14,12 @@ import { format } from "date-fns";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { platformNames } from "@/lib/niche-data";
 import { allMauritianVillages } from "@/lib/location-data";
+import { Slider } from "@/components/ui/slider";
 
 export function CreatorFormPage1() {
-  const { control } = useFormContext();
+  const { control, watch } = useFormContext();
+
+  const primaryGenderValue = watch('primaryAudienceGender');
 
   return (
     <div className="space-y-4">
@@ -248,11 +251,26 @@ export function CreatorFormPage1() {
                 name="primaryAudienceGender"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Audience Gender Split</FormLabel>
-                    <FormControl>
-                        <Input placeholder="e.g., 60% Female, 40% Male" {...field} />
-                    </FormControl>
-                    <FormMessage />
+                        <FormLabel>Audience Gender Split</FormLabel>
+                        <FormControl>
+                            <div>
+                                <Slider
+                                    defaultValue={[field.value]}
+                                    onValueChange={(value) => field.onChange(value[0])}
+                                    max={100}
+                                    step={1}
+                                    className="my-4"
+                                />
+                                <div className="flex justify-between text-xs text-muted-foreground">
+                                    <span>Female</span>
+                                    <span>Male</span>
+                                </div>
+                                <div className="text-center text-sm font-medium">
+                                    {primaryGenderValue}% Female / {100 - primaryGenderValue}% Male
+                                </div>
+                            </div>
+                        </FormControl>
+                        <FormMessage />
                     </FormItem>
                 )}
             />

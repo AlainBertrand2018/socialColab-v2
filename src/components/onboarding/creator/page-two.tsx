@@ -10,13 +10,16 @@ import { platformNames } from "@/lib/niche-data";
 import { allMauritianVillages } from "@/lib/location-data";
 import { Trash } from "lucide-react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Slider } from "@/components/ui/slider";
 
 export function CreatorFormPage2() {
-  const { control } = useFormContext();
+  const { control, watch } = useFormContext();
   const { fields, append, remove } = useFieldArray({
     control,
     name: "otherPlatforms",
   });
+
+  const otherPlatformsValues = watch('otherPlatforms');
 
   return (
     <div className="space-y-4">
@@ -75,9 +78,34 @@ export function CreatorFormPage2() {
                     <FormField control={control} name={`otherPlatforms.${index}.audienceAge`} render={({ field }) => (
                         <FormItem><FormLabel>Audience Age Group</FormLabel><FormControl><Input placeholder="e.g., 25-34" {...field} /></FormControl><FormMessage /></FormItem>
                     )} />
-                    <FormField control={control} name={`otherPlatforms.${index}.audienceGender`} render={({ field }) => (
-                        <FormItem><FormLabel>Audience Gender Split</FormLabel><FormControl><Input placeholder="e.g., 60% F, 40% M" {...field} /></FormControl><FormMessage /></FormItem>
-                    )} />
+                    <FormField
+                        control={control}
+                        name={`otherPlatforms.${index}.audienceGender`}
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Audience Gender Split</FormLabel>
+                                <FormControl>
+                                    <div>
+                                        <Slider
+                                            defaultValue={[field.value]}
+                                            onValueChange={(value) => field.onChange(value[0])}
+                                            max={100}
+                                            step={1}
+                                            className="my-4"
+                                        />
+                                        <div className="flex justify-between text-xs text-muted-foreground">
+                                            <span>Female</span>
+                                            <span>Male</span>
+                                        </div>
+                                         <div className="text-center text-sm font-medium">
+                                            {otherPlatformsValues?.[index]?.audienceGender ?? 50}% Female / {100 - (otherPlatformsValues?.[index]?.audienceGender ?? 50)}% Male
+                                        </div>
+                                    </div>
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
                     <FormField control={control} name={`otherPlatforms.${index}.engagementRate`} render={({ field }) => (
                         <FormItem><FormLabel>Engagement Rate (%)</FormLabel><FormControl><Input type="number" step="0.1" placeholder="e.g., 3.5" {...field} /></FormControl><FormMessage /></FormItem>
                     )} />
@@ -113,7 +141,7 @@ export function CreatorFormPage2() {
       <Button
         type="button"
         variant="outline"
-        onClick={() => append({ platform: '', handle: '@', followers: 0, audienceAge: '', audienceGender: '', engagementRate: 0, maxViews: 0, topLocations: [] })}
+        onClick={() => append({ platform: '', handle: '@', followers: 0, audienceAge: '', audienceGender: 50, engagementRate: 0, maxViews: 0, topLocations: [] })}
       >
         + Add another platform
       </Button>
