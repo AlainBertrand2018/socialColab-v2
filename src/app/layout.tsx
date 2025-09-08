@@ -10,7 +10,7 @@ const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-poppins',
-  weight: ['400', '600', '700'],
+  weight: ['300', '400', '600', '700'],
 });
 
 const ptSans = PT_Sans({
