@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const brandBenefits = [
   {
-    image: 'https://picsum.photos/400/250',
+    image: '/images/brandreach.webp',
     dataAiHint: 'network connection',
     alt: 'Illustration of network connections',
     title: 'AI-Powered Discovery',
