@@ -40,7 +40,7 @@ export function Testimonials() {
         <h2 className="text-3xl md:text-4xl font-bold font-headline">
           Loved by Brands and <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">Influencers</span>
         </h2>
-        <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
+        <p className="md:w-3/4 mx-auto mt-4 text-lg text-muted-foreground font-headline font-light">
           See what our users have to say about their experience with Social Colab.
         </p>
       </div>
