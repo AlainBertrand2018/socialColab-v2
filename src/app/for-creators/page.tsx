@@ -20,7 +20,7 @@ export default function ForCreatorsPage() {
         setHandle(randomCreator.socialPseudonym);
 
         const shuffledJobs = [...jobs].sort(() => 0.5 - Math.random());
-        setShowcasedJobs(shuffledJobs.slice(0, 6));
+        setShowcasedJobs(shuffledJobs.slice(0, 4));
     }, []);
 
   return (
@@ -38,7 +38,7 @@ export default function ForCreatorsPage() {
                     <CardDescription>Here are some of the latest campaigns. Apply now!</CardDescription>
                 </CardHeader>
                 <CardContent>
-                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                         {showcasedJobs.map(job => (
                             <JobCard key={job.id} job={job} />
                         ))}
