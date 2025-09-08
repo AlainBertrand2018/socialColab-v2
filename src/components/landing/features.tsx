@@ -31,7 +31,7 @@ const brandBenefits = [
 
 const creatorBenefits = [
   {
-    image: 'https://picsum.photos/400/253',
+    image: '/images/socialColab_authentic.webp',
     dataAiHint: 'brand partnership',
     alt: 'Creator collaborating with a brand',
     title: 'Discover Authentic Brands',
