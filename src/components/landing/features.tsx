@@ -45,7 +45,7 @@ const creatorBenefits = [
     description: 'Create a stunning profile that acts as your digital media kit. Highlight your best work and audience demographics to attract your dream brands.',
   },
   {
-    image: 'https://picsum.photos/400/255',
+    image: '/images/socialColab_secureDeals.webp',
     dataAiHint: 'secure payment',
     alt: 'Illustration of a secure transaction',
     title: 'Streamlined & Secure Deals',
