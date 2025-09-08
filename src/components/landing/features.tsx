@@ -74,15 +74,15 @@ const BenefitCard = ({ image, dataAiHint, title, description, alt }: { image: st
 
 export function Features() {
   return (
-    <section id="showcase" className="py-24 sm:py-32 bg-secondary relative overflow-hidden">
+    <section id="features" className="py-24 sm:py-32 bg-secondary relative overflow-hidden">
       <div className="container">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
-            How It Works
+            A Powerful Toolkit for Everyone
             </h2>
-            <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground font-headline">
-            We are a place where Brands and vetted Creators meet, discuss and make deals over exciting campaigns, focusing on community spirit while offering AI-powered solutions.
-            </p>
+            <div className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
+            Whether you're a brand looking to scale or a creator ready to shine, our platform provides the tools you need to succeed.
+            </div>
         </div>
 
         <Tabs defaultValue="brands" className="w-full">

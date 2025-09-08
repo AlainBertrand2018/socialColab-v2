@@ -9,7 +9,7 @@ import { WaitlistDialog } from './waitlist-dialog';
 
 const navLinks = [
   { name: 'Features', href: '#features' },
-  { name: 'Showcase', href: '#showcase' },
+  { name: 'Campaigns', href: '#jobs' },
   { name: 'Testimonials', href: '#testimonials' },
 ];
 
