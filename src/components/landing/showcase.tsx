@@ -10,6 +10,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Users, Youtube, Instagram } from 'lucide-react';
 import { TikTokIcon } from '@/components/icons/tiktok';
+import Autoplay from "embla-carousel-autoplay"
 
 const platformIcons: { [key: string]: React.ReactNode } = {
   Instagram: <Instagram className="h-4 w-4" />,
@@ -63,7 +64,7 @@ export function Showcase() {
   const filteredCreators = selectedNiche === 'All' ? creators : creators.filter(c => c.niche === selectedNiche);
 
   return (
-    <section id="showcase" className="py-24 sm:py-32">
+    <section id="showcase" className="py-24 sm:py-32 overflow-hidden">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold font-headline">
@@ -89,12 +90,17 @@ export function Showcase() {
       </div>
 
       <Carousel
-        opts={{ align: "start", loop: filteredCreators.length > 5 }}
+        opts={{ align: "start", loop: true }}
+        plugins={[
+          Autoplay({
+            delay: 3000,
+          }),
+        ]}
         className="w-full"
       >
-        <CarouselContent className="-ml-1">
+        <CarouselContent className="-ml-4">
           {filteredCreators.map(creator => (
-            <CarouselItem key={creator.id} className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 pl-4">
+            <CarouselItem key={creator.id} className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6 pl-4">
               <CreatorCard creator={creator} />
             </CarouselItem>
           ))}
