@@ -81,7 +81,7 @@ export function Features() {
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
             We Have Powerful AI-driven Toolkits for Everyone
             </h2>
-            <div className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
+            <div className="md:w-3/4 mx-auto mt-4 text-lg text-muted-foreground font-headline font-light">
             Whether you're a brand looking to scale or a creator ready to shine, our platform provides the tools you need to succeed.
             </div>
         </div>
