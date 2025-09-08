@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Poppins, PT_Sans } from 'next/font/google';
 import './globals.css';
-import { Toaster } from '@/components/ui/toaster';
+import { cn } from '@/lib/utils';
 import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
-import { cn } from '@/lib/utils';
+import { Providers } from '@/components/providers';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -38,14 +38,15 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={cn('font-body antialiased', poppins.variable, ptSans.variable)}>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-        <Toaster />
+        <Providers>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
+        </Providers>
       </body>
     </html>
   );
