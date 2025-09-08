@@ -1,7 +1,8 @@
+
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import type { Job } from "@/lib/job-data";
 import { DollarSign, Tag } from "lucide-react";
@@ -15,21 +16,21 @@ export function JobCard({ job }: { job: Job }) {
         <Dialog>
             <DialogTrigger asChild>
                 <Card className="flex flex-col cursor-pointer transition-transform hover:-translate-y-1">
-                    <CardHeader className="flex-row items-start gap-3">
+                    <CardHeader className="flex-row items-start gap-2 p-3">
                         <Image
                             src={job.brand.logo}
                             alt={`${job.brand.name} logo`}
                             data-ai-hint={job.brand.logoAiHint}
-                            width={48}
-                            height={48}
+                            width={40}
+                            height={40}
                             className="rounded-md border bg-background p-1 aspect-square object-contain"
                         />
                         <div className="flex-1">
-                            <CardTitle className="text-base font-headline group-hover:text-primary leading-tight">{job.title}</CardTitle>
+                            <CardTitle className="text-sm font-headline group-hover:text-primary leading-tight">{job.title}</CardTitle>
                             <p className="text-xs text-muted-foreground font-medium">by {job.brand.name}</p>
                         </div>
                     </CardHeader>
-                    <CardContent className="flex-grow space-y-3">
+                    <CardContent className="flex-grow space-y-2 p-3 pt-0">
                         <Separator />
                         <div className="flex items-center gap-2 text-xs text-muted-foreground">
                             <Tag size={14} className="text-primary" />
@@ -40,9 +41,9 @@ export function JobCard({ job }: { job: Job }) {
                             <p className="font-semibold text-foreground">{budget}</p>
                         </div>
                     </CardContent>
-                    <CardFooter>
+                    <div className="p-3 pt-0">
                         <Button className="w-full" size="sm">View & Apply</Button>
-                    </CardFooter>
+                    </div>
                 </Card>
             </DialogTrigger>
             <DialogContent className="max-w-3xl">
