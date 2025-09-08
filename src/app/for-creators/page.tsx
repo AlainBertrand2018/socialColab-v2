@@ -15,13 +15,13 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 
 const toolkits = [
-    { name: 'AI Content Genie', icon: <Bot />, href: '#' },
-    { name: 'Analytics', icon: <BarChart />, href: '#' },
-    { name: 'Media Kit Builder', icon: <FileText />, href: '#' },
-    { name: 'Campaign Manager', icon: <Briefcase />, href: '#' },
-    { name: 'Content Calendar', icon: <Calendar />, href: '#' },
-    { name: 'Collaboration Hub', icon: <MessageSquare />, href: '#' },
-    { name: 'Account Settings', icon: <Settings />, href: '#' },
+    { name: 'AI Content Genie', icon: <Bot />, href: '#', tooltip: "Generate Quality Audiovisual Content" },
+    { name: 'Analytics', icon: <BarChart />, href: '#', tooltip: "Take A Snapshot Of How Your Campaign Is Doing" },
+    { name: 'Media Kit Builder', icon: <FileText />, href: '#', tooltip: "Organize Your Audiovisual Assets For Deployment" },
+    { name: 'Campaign Manager', icon: <Briefcase />, href: '#', tooltip: "Organize Your Campaign as a Full Fledged Project" },
+    { name: 'Content Calendar', icon: <Calendar />, href: '#', tooltip: "Schedule Your Posts At The Best Times" },
+    { name: 'Collaboration Hub', icon: <MessageSquare />, href: '#', tooltip: "Everything You Need to Initialize, Engage and Deliver in Private Discussions" },
+    { name: 'Account Settings', icon: <Settings />, href: '#', tooltip: "Manage your Profile" },
 ]
 
 export default function ForCreatorsPage() {
@@ -65,7 +65,7 @@ export default function ForCreatorsPage() {
                                         </Link>
                                     </TooltipTrigger>
                                     <TooltipContent>
-                                        <p>{tool.name}</p>
+                                        <p>{tool.tooltip}</p>
                                     </TooltipContent>
                                 </Tooltip>
                             ))}
