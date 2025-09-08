@@ -15,16 +15,18 @@ export function ProfileHeader({ creator }: { creator: CreatorProfile }) {
           className="object-cover"
         />
       </div>
-      <div className="px-6 pb-6">
+      <div className="px-6 pb-6 relative">
         <div className="flex items-end -mt-20">
-          <Image
-            src={creator.avatar}
-            alt={`Avatar of ${creator.name}`}
-            data-ai-hint={creator.avatarAiHint}
-            width={160}
-            height={160}
-            className="rounded-full border-4 border-background bg-background aspect-square object-cover"
-          />
+          <div className="relative">
+            <Image
+              src={creator.avatar}
+              alt={`Avatar of ${creator.name}`}
+              data-ai-hint={creator.avatarAiHint}
+              width={160}
+              height={160}
+              className="rounded-full border-4 border-background bg-background aspect-square object-cover"
+            />
+          </div>
           <div className="ml-6 mb-4">
             <h1 className="text-3xl font-bold font-headline">{creator.name}</h1>
             <p className="text-muted-foreground">@{creator.socialPseudonym}</p>
