@@ -94,7 +94,14 @@ export function CreatorOnboardingForm() {
       primaryEngagementRate: 0,
       primaryMaxViews: 0,
       otherPlatforms: [],
-      pricing: {},
+      pricing: {
+        productPlacement: undefined,
+        promotionalVideo: undefined,
+        sponsoredBlogPost: undefined,
+        publicAppearance: undefined,
+        sponsoredHowTos: undefined,
+        ambassadorship: undefined,
+      },
       portfolio: [
           { title: '', description: '', files: null },
           { title: '', description: '', files: null }
