@@ -50,10 +50,10 @@ export default function ForCreatorsPage() {
                     <CardDescription>Leverage our AI-powered tools to grow your brand.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
+                    <div className="flex items-center justify-between text-center">
                         {toolkits.map(tool => (
                              <Link href={tool.href} key={tool.name}>
-                                <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer">
+                                <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer w-24">
                                     <div className="h-8 w-8">{tool.icon}</div>
                                     <span className="text-xs font-semibold">{tool.name}</span>
                                 </div>
