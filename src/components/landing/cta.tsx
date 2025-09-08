@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function Cta() {
   return (
@@ -12,7 +13,9 @@ export function Cta() {
         <p className="mt-4 text-xl text-muted-foreground">
           Join CollabCentral today and start building powerful partnerships that drive real results.
         </p>
-        <Button size="lg" className="mt-8">Sign Up Now</Button>
+        <Button size="lg" className="mt-8" asChild>
+            <Link href="/onboarding">Sign Up Now</Link>
+        </Button>
       </div>
     </section>
   );

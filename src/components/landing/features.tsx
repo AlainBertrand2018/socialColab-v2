@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { WaitlistDialog } from './waitlist-dialog';
+import Link from 'next/link';
 
 const brandBenefits = [
   {
@@ -106,7 +106,9 @@ export function Features() {
           </TabsContent>
         </Tabs>
         <div className="text-center mt-16">
-          <WaitlistDialog trigger={<Button size="lg">Join The Waitlist</Button>} />
+          <Button size="lg" asChild>
+            <Link href="/onboarding">Get Started Today</Link>
+          </Button>
         </div>
       </div>
     </section>

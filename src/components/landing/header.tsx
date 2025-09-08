@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { Menu, Shapes } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { WaitlistDialog } from './waitlist-dialog';
 
 const navLinks = [
   { name: 'Features', href: '#features' },
@@ -33,7 +32,9 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end gap-4">
           <div className="hidden md:flex md:items-center md:gap-4">
             <Button variant="ghost">Log In</Button>
-            <WaitlistDialog trigger={<Button>Join the Waitlist</Button>} />
+            <Button asChild>
+                <Link href="/onboarding">Get Started</Link>
+            </Button>
           </div>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -45,7 +46,7 @@ export function Header() {
             <SheetContent side="left">
               <div className="flex flex-col h-full">
                 <div className="mb-8">
-                  <Link href="/" className="mr-6 flex items-center space-x-2">
+                  <Link href="/" className="mr-6 flex items-center space-x-2" onClick={() => setOpen(false)}>
                     <Shapes className="h-6 w-6 text-primary" />
                     <span className="font-bold font-headline">CollabCentral</span>
                   </Link>
@@ -59,7 +60,9 @@ export function Header() {
                 </nav>
                 <div className="mt-auto flex flex-col gap-4">
                   <Button variant="ghost">Log In</Button>
-                  <WaitlistDialog trigger={<Button>Join the Waitlist</Button>} />
+                   <Button asChild onClick={() => setOpen(false)}>
+                     <Link href="/onboarding">Get Started</Link>
+                    </Button>
                 </div>
               </div>
             </SheetContent>
