@@ -1,26 +1,34 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { GalleryHorizontal, Lightbulb, MessageSquare, Rss } from 'lucide-react';
+import Image from 'next/image';
+import { Card, CardContent, CardTitle } from '@/components/ui/card';
 
 const features = [
   {
-    icon: <Lightbulb size={28} className="text-primary" />,
+    image: 'https://picsum.photos/400/250',
+    dataAiHint: 'influencer discovery',
     title: 'Influencer Discovery',
     description: 'Our AI-powered tool analyzes your campaign goals to suggest the most effective influencers for your brand.',
+    alt: 'AI discovery concept'
   },
   {
-    icon: <GalleryHorizontal size={28} className="text-primary" />,
+    image: 'https://picsum.photos/400/251',
+    dataAiHint: 'brand showcase',
     title: 'Brand Showcase',
     description: 'Create a stunning profile to showcase your brand, past collaborations, and what you stand for.',
+    alt: 'Brand profile page'
   },
   {
-    icon: <Rss size={28} className="text-primary" />,
+    image: 'https://picsum.photos/400/252',
+    dataAiHint: 'social feed',
     title: 'Personalized Feed',
     description: 'Follow your favorite brands and influencers to stay updated on their latest content and opportunities.',
+    alt: 'Personalized social media feed'
   },
   {
-    icon: <MessageSquare size={28} className="text-primary" />,
+    image: 'https://picsum.photos/400/253',
+    dataAiHint: 'messaging app',
     title: 'Direct Messaging',
     description: 'Communicate seamlessly with potential partners through our secure and intuitive messaging system.',
+    alt: 'Direct messaging interface'
   },
 ];
 
@@ -36,17 +44,22 @@ export function Features() {
         </p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map(({ icon, title, description }) => (
-          <Card key={title} className="bg-card/60 backdrop-blur-sm transition-transform hover:-translate-y-2">
-            <CardHeader>
-              <div className="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg mb-4">
-                {icon}
-              </div>
-              <CardTitle className="font-headline">{title}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">{description}</p>
-            </CardContent>
+        {features.map(({ image, dataAiHint, title, description, alt }) => (
+          <Card key={title} className="bg-card/60 backdrop-blur-sm transition-transform hover:-translate-y-2 overflow-hidden">
+            <Image
+              src={image}
+              width={400}
+              height={250}
+              data-ai-hint={dataAiHint}
+              alt={alt}
+              className="w-full h-auto aspect-[16/10] object-cover"
+            />
+            <div className="p-6">
+              <CardTitle className="font-headline mb-2">{title}</CardTitle>
+              <CardContent className="p-0">
+                <p className="text-muted-foreground">{description}</p>
+              </CardContent>
+            </div>
           </Card>
         ))}
       </div>
