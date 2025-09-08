@@ -1,7 +1,7 @@
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { creators } from '@/lib/creator-data';
-import { CreatorCard } from './showcase';
+import { CreatorCard } from './creator-card';
 
 export function DiscoverCreatorsDialog({ trigger }: { trigger: React.ReactNode }) {
   return (
