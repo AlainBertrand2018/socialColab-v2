@@ -105,8 +105,10 @@ export function Showcase() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden lg:flex" />
-        <CarouselNext className="hidden lg:flex" />
+        <div className="hidden lg:block">
+            <CarouselPrevious />
+            <CarouselNext />
+        </div>
       </Carousel>
     </section>
   );
