@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Menu, Shapes } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { WaitlistDialog } from './waitlist-dialog';
 
 const navLinks = [
   { name: 'Features', href: '#features' },
@@ -32,7 +33,7 @@ export function Header() {
         <div className="flex flex-1 items-center justify-end gap-4">
           <div className="hidden md:flex md:items-center md:gap-4">
             <Button variant="ghost">Log In</Button>
-            <Button>Sign Up</Button>
+            <WaitlistDialog trigger={<Button>Join the Waitlist</Button>} />
           </div>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -58,7 +59,7 @@ export function Header() {
                 </nav>
                 <div className="mt-auto flex flex-col gap-4">
                   <Button variant="ghost">Log In</Button>
-                  <Button>Sign Up</Button>
+                  <WaitlistDialog trigger={<Button>Join the Waitlist</Button>} />
                 </div>
               </div>
             </SheetContent>
