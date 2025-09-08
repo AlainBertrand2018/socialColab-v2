@@ -45,7 +45,7 @@ export function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t flex justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Social Colab. All rights reserved.
+            &copy; {new Date().getFullYear()} Alain BERTRAND. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link href="#" className="text-muted-foreground hover:text-foreground"><Twitter size={18} /></Link>
