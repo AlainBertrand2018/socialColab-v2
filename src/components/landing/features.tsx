@@ -38,7 +38,7 @@ const creatorBenefits = [
     description: 'Connect with brands that align with your values and content. Our platform helps you find meaningful, long-term partnerships.',
   },
   {
-    image: 'https://picsum.photos/400/254',
+    image: '/images/socialColab_portfolio.webp',
     dataAiHint: 'personal profile',
     alt: 'Creator profile page',
     title: 'Showcase Your Portfolio',
