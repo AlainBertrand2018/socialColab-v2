@@ -43,9 +43,11 @@ export default function ForCreatorsPage() {
                             <JobCard key={job.id} job={job} />
                         ))}
                     </div>
-                     <DiscoverJobsDialog
-                        trigger={<Button size="lg">Discover All Jobs</Button>}
-                    />
+                    <div className="text-center">
+                         <DiscoverJobsDialog
+                            trigger={<Button size="lg">Discover All Jobs</Button>}
+                        />
+                    </div>
                 </CardContent>
             </Card>
 
