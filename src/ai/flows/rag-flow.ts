@@ -6,7 +6,7 @@
  */
 
 import { ai } from '@/ai/genkit';
-import { z } from 'genkit';
+import { z } from 'zod';
 import { retrieve } from 'genkit/experimental/ai';
 import { unstructured } from 'genkit/experimental/unstructured';
 import * as path from 'path';
@@ -45,7 +45,7 @@ const ragPrompt = ai.definePrompt(
     name: 'ragPrompt',
     input: { schema: RagInputSchema },
     prompt: `You are an expert Social Media Marketing consultant.
-    Your name is CollabBot.
+    Your name is Tadeo.
     Your knowledge is strictly limited to the information provided in the context below.
     Do not answer any questions or requests that are not related to the context.
     If the context does not contain the answer, say "I'm sorry, I don't have enough information to answer that."
