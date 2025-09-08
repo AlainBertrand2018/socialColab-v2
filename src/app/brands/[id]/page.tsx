@@ -4,6 +4,8 @@ import { ProfileHeader } from '@/components/brands/profile-header';
 import { ProfileSidebar } from '@/components/brands/profile-sidebar';
 import { CampaignBrief } from '@/components/brands/campaign-brief';
 import { MainContent } from '@/components/creators/main-content';
+import { PastCampaigns } from '@/components/brands/past-campaigns';
+import { Separator } from '@/components/ui/separator';
 
 export default function BrandProfilePage({ params }: { params: { id: string } }) {
   const brand = brands.find((b) => b.id.toString() === params.id);
@@ -23,6 +25,8 @@ export default function BrandProfilePage({ params }: { params: { id: string } })
           <div className="lg:col-span-2">
             <MainContent>
                 <CampaignBrief />
+                <Separator className="my-8" />
+                <PastCampaigns />
             </MainContent>
           </div>
         </div>
