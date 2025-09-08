@@ -44,7 +44,7 @@ export function WaitlistForm() {
 
   return (
     <div className="grid gap-6">
-      <Alert className="bg-primary text-primary-foreground">
+      <Alert className="bg-accent/10 border-accent text-accent-foreground">
         <Lightbulb className="h-4 w-4" />
         <AlertTitle className="font-bold">LIMITED EXCLUSIVE FOUNDER's OFFER for our first 100 registrants</AlertTitle>
         <AlertDescription>
