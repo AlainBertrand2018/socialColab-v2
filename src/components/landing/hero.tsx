@@ -35,7 +35,7 @@ export function Hero() {
             <Link href="/onboarding" target="_blank" rel="noopener noreferrer">Get Started For Free</Link>
           </Button>
           <Button variant="outline" className="w-full md:w-auto bg-transparent border-white hover:bg-accent hover:text-accent-foreground hover:border-accent" size="lg" asChild>
-            <Link href="#features">
+            <Link href="#what-we-are">
               Learn More
             </Link>
           </Button>
