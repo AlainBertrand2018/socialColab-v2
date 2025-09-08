@@ -2,6 +2,7 @@ import { Hero } from '@/components/landing/hero';
 import { WhatWeAre } from '@/components/landing/what-we-are';
 import { Features } from '@/components/landing/features';
 import { Showcase } from '@/components/landing/showcase';
+import { Jobs } from '@/components/landing/jobs';
 import { Testimonials } from '@/components/landing/testimonials';
 import { Cta } from '@/components/landing/cta';
 
@@ -12,6 +13,7 @@ export default function Home() {
       <WhatWeAre />
       <Features />
       <Showcase />
+      <Jobs />
       <Testimonials />
       <Cta />
     </>
