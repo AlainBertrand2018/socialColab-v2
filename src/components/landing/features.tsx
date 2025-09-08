@@ -21,7 +21,7 @@ const brandBenefits = [
     description: 'From initial outreach to final payment, manage your entire campaign workflow in one place. Our integrated tools make collaboration effortless.',
   },
   {
-    image: 'https://picsum.photos/400/252',
+    image: '/images/SocialColab_analytics.webp',
     dataAiHint: 'data analytics',
     alt: 'Dashboard showing analytics',
     title: 'Real-Time Analytics',
