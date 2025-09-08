@@ -38,7 +38,7 @@ export function OnboardingFlow() {
                         <span>I'm a Creator</span>
                     </Button>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className="max-w-[60vw]">
                     <CreatorOnboardingForm />
                 </DialogContent>
             </Dialog>
@@ -53,7 +53,7 @@ export function OnboardingFlow() {
                         <span>I'm a Brand</span>
                     </Button>
                 </DialogTrigger>
-                <DialogContent>
+                <DialogContent className="max-w-[60vw]">
                     <BrandOnboardingForm />
                 </DialogContent>
             </Dialog>
