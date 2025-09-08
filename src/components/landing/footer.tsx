@@ -14,7 +14,7 @@ export function Footer() {
               <span className="font-bold text-lg font-headline text-primary">Social Colab</span>
             </Link>
             <p className="text-sm text-muted-foreground">
-              Connecting brands and influencers to create amazing content.
+              Connecting local brands and influencers to create amazing content.
             </p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-8 col-span-4 md:col-span-3">
