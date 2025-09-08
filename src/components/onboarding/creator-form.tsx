@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -7,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 
 const creatorFormSchema = z.object({
@@ -41,14 +42,14 @@ export function CreatorOnboardingForm() {
     }
 
   return (
-    <Card className="shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline">Create Your Creator Profile</CardTitle>
-        <CardDescription>Tell us about yourself. You can add more details later.</CardDescription>
-      </CardHeader>
+    <>
+      <DialogHeader>
+        <DialogTitle className="font-headline text-2xl">Create Your Creator Profile</DialogTitle>
+        <DialogDescription>Tell us about yourself. You can add more details later.</DialogDescription>
+      </DialogHeader>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <CardContent className="space-y-4">
+          <div className="space-y-4 py-4">
             <FormField
               control={form.control}
               name="name"
@@ -101,12 +102,12 @@ export function CreatorOnboardingForm() {
                 </FormItem>
               )}
             />
-          </CardContent>
-          <CardFooter>
+          </div>
+          <DialogFooter>
             <Button type="submit" className="w-full">Create Profile</Button>
-          </CardFooter>
+          </DialogFooter>
         </form>
       </Form>
-    </Card>
+    </>
   );
 }

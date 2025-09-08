@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm } from "react-hook-form";
@@ -6,7 +7,7 @@ import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 
 const brandFormSchema = z.object({
@@ -40,14 +41,14 @@ export function BrandOnboardingForm() {
     }
 
   return (
-    <Card className="shadow-lg">
-      <CardHeader>
-        <CardTitle className="font-headline">Set Up Your Brand Profile</CardTitle>
-        <CardDescription>Let's get your brand ready to connect with creators.</CardDescription>
-      </CardHeader>
+    <>
+      <DialogHeader>
+        <DialogTitle className="font-headline text-2xl">Set Up Your Brand Profile</DialogTitle>
+        <DialogDescription>Let's get your brand ready to connect with creators.</DialogDescription>
+      </DialogHeader>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
-          <CardContent className="space-y-4">
+          <div className="space-y-4 py-4">
             <FormField
               control={form.control}
               name="brandName"
@@ -100,12 +101,12 @@ export function BrandOnboardingForm() {
                 </FormItem>
               )}
             />
-          </CardContent>
-          <CardFooter>
+          </div>
+          <DialogFooter>
             <Button type="submit" className="w-full">Create Brand Profile</Button>
-          </CardFooter>
+          </DialogFooter>
         </form>
       </Form>
-    </Card>
+    </>
   );
 }
