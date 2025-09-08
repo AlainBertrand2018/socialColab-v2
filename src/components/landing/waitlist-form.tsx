@@ -44,8 +44,8 @@ export function WaitlistForm() {
 
   return (
     <div className="grid gap-6">
-      <Alert>
-        <Lightbulb className="h-4 w-4" />
+      <Alert className="bg-primary text-primary-foreground">
+        <Lightbulb className="h-4 w-4 text-primary-foreground" />
         <AlertTitle className="font-bold">LIMITED EXCLUSIVE FOUNDER's OFFER for our first 100 registrants</AlertTitle>
         <AlertDescription>
           <p>Join our waitlist and provide feedback to get a special flat-fee of <strong>Rs 500/month</strong>, for lifetime access as a thank you from us.</p>
