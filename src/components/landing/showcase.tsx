@@ -20,20 +20,21 @@ export function Showcase() {
     : creators.filter(c => c.niche.includes(selectedNiche)).slice(0, 6);
 
   return (
-    <section id="showcase" className="py-24 sm:py-32 overflow-hidden bg-secondary">
+    <section id="showcase" className="py-24 sm:py-32 overflow-hidden bg-primary text-primary-foreground">
         <div className="container text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Meet Our Vetted Creators
             </h2>
-            <div className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
+            <div className="md:w-3/4 mx-auto mt-4 text-xl text-primary-foreground/90">
                 Discover talented individuals ready to bring your brand's story to life.
             </div>
             <div className="flex justify-center gap-2 mt-8 flex-wrap">
                 {visibleNiches.map(niche => (
                     <Button 
                         key={niche} 
-                        variant={selectedNiche === niche ? 'default' : 'outline'}
+                        variant={selectedNiche === niche ? 'secondary' : 'outline'}
                         onClick={() => setSelectedNiche(niche)}
+                        className={selectedNiche !== niche ? 'bg-primary/20 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary' : ''}
                     >
                         {niche}
                     </Button>
@@ -50,7 +51,7 @@ export function Showcase() {
 
             <div className="text-center mt-16">
                 <DiscoverCreatorsDialog
-                    trigger={<Button size="lg">Discover More Creators</Button>}
+                    trigger={<Button size="lg" variant="secondary">Discover More Creators</Button>}
                 />
             </div>
         </div>
