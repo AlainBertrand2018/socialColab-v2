@@ -63,39 +63,39 @@ export function Showcase() {
   const filteredCreators = selectedNiche === 'All' ? creators : creators.filter(c => c.niche === selectedNiche);
 
   return (
-    <section id="showcase" className="container py-24 sm:py-32">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold font-headline">
-          Meet Our Vetted Creators
-        </h2>
-        <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
-          Discover talented individuals ready to bring your brand's story to life.
-        </p>
-      </div>
+    <section id="showcase" className="py-24 sm:py-32">
+      <div className="container">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">
+            Meet Our Vetted Creators
+          </h2>
+          <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
+            Discover talented individuals ready to bring your brand's story to life.
+          </p>
+        </div>
 
-      <div className="flex justify-center flex-wrap gap-2 mb-12">
-        {niches.map(niche => (
-          <Button
-            key={niche}
-            variant={selectedNiche === niche ? 'default' : 'outline'}
-            onClick={() => setSelectedNiche(niche)}
-            className="capitalize"
-          >
-            {niche}
-          </Button>
-        ))}
+        <div className="flex justify-center flex-wrap gap-2 mb-12">
+          {niches.map(niche => (
+            <Button
+              key={niche}
+              variant={selectedNiche === niche ? 'default' : 'outline'}
+              onClick={() => setSelectedNiche(niche)}
+              className="capitalize"
+            >
+              {niche}
+            </Button>
+          ))}
+        </div>
       </div>
 
       <Carousel
-        opts={{ align: "start", loop: filteredCreators.length > 4 }}
-        className="relative"
+        opts={{ align: "start", loop: filteredCreators.length > 5 }}
+        className="w-full"
       >
-        <CarouselContent>
+        <CarouselContent className="-ml-1">
           {filteredCreators.map(creator => (
-            <CarouselItem key={creator.id} className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4">
-              <div className="p-1">
-                <CreatorCard creator={creator} />
-              </div>
+            <CarouselItem key={creator.id} className="basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/5 pl-4">
+              <CreatorCard creator={creator} />
             </CarouselItem>
           ))}
         </CarouselContent>
