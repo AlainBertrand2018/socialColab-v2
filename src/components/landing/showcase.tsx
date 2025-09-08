@@ -25,7 +25,7 @@ export function Showcase() {
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
                 Meet Our Vetted Creators
             </h2>
-            <div className="md:w-3/4 mx-auto mt-4 text-xl text-primary-foreground/90">
+            <div className="md:w-3/4 mx-auto mt-4 text-lg text-primary-foreground/90 font-headline font-light">
                 Discover talented individuals ready to bring your brand's story to life.
             </div>
             <div className="flex justify-center gap-2 mt-8 flex-wrap">
@@ -58,3 +58,4 @@ export function Showcase() {
     </section>
   );
 }
+
