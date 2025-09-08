@@ -15,33 +15,33 @@ export function JobCard({ job }: { job: Job }) {
         <Dialog>
             <DialogTrigger asChild>
                 <Card className="flex flex-col cursor-pointer transition-transform hover:-translate-y-1">
-                    <CardHeader className="flex-row items-center gap-4">
+                    <CardHeader className="flex-row items-start gap-3">
                         <Image
                             src={job.brand.logo}
                             alt={`${job.brand.name} logo`}
                             data-ai-hint={job.brand.logoAiHint}
-                            width={64}
-                            height={64}
-                            className="rounded-lg border bg-background p-1 aspect-square object-contain"
+                            width={48}
+                            height={48}
+                            className="rounded-md border bg-background p-1 aspect-square object-contain"
                         />
-                        <div>
-                            <CardTitle className="text-lg font-headline group-hover:text-primary">{job.title}</CardTitle>
-                            <p className="text-sm text-muted-foreground font-medium">by {job.brand.name}</p>
+                        <div className="flex-1">
+                            <CardTitle className="text-base font-headline group-hover:text-primary leading-tight">{job.title}</CardTitle>
+                            <p className="text-xs text-muted-foreground font-medium">by {job.brand.name}</p>
                         </div>
                     </CardHeader>
-                    <CardContent className="flex-grow space-y-4">
+                    <CardContent className="flex-grow space-y-3">
                         <Separator />
-                        <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <Tag size={16} className="text-primary" />
+                        <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <Tag size={14} className="text-primary" />
                             <Badge variant="secondary" className="capitalize">{job.niche}</Badge>
                         </div>
-                         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                            <DollarSign size={16} className="text-primary" />
+                         <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                            <DollarSign size={14} className="text-primary" />
                             <p className="font-semibold text-foreground">{budget}</p>
                         </div>
                     </CardContent>
                     <CardFooter>
-                        <Button className="w-full">View & Apply</Button>
+                        <Button className="w-full" size="sm">View & Apply</Button>
                     </CardFooter>
                 </Card>
             </DialogTrigger>
