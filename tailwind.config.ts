@@ -96,7 +96,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       transitionDuration: {
-        '2500': '2500ms',
+        '1500': '1500ms',
       }
     },
   },
