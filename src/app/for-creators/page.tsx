@@ -9,7 +9,18 @@ import { creators } from "@/lib/creator-data";
 import { CreatorCard } from "@/components/landing/creator-card";
 import { jobs, type Job } from '@/lib/job-data';
 import { JobCard } from '@/components/landing/job-card';
-import { Bot, BarChart, FileText } from 'lucide-react';
+import { Bot, BarChart, FileText, Briefcase, Calendar, MessageSquare, Settings } from 'lucide-react';
+import Link from 'next/link';
+
+const toolkits = [
+    { name: 'AI Content Genie', icon: <Bot />, href: '#' },
+    { name: 'Analytics', icon: <BarChart />, href: '#' },
+    { name: 'Media Kit Builder', icon: <FileText />, href: '#' },
+    { name: 'Campaign Manager', icon: <Briefcase />, href: '#' },
+    { name: 'Content Calendar', icon: <Calendar />, href: '#' },
+    { name: 'Collaboration Hub', icon: <MessageSquare />, href: '#' },
+    { name: 'Account Settings', icon: <Settings />, href: '#' },
+]
 
 export default function ForCreatorsPage() {
     const [handle, setHandle] = useState('Creator');
@@ -39,37 +50,15 @@ export default function ForCreatorsPage() {
                     <CardDescription>Leverage our AI-powered tools to grow your brand.</CardDescription>
                 </CardHeader>
                 <CardContent>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <Card>
-                            <CardHeader className="flex flex-row items-center justify-between pb-2">
-                                <CardTitle className="text-sm font-medium">AI Content Generator</CardTitle>
-                                <Bot className="h-4 w-4 text-muted-foreground" />
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-xs text-muted-foreground mb-4">Create engaging social media posts in seconds.</p>
-                                <Button size="sm" className="w-full">Launch Tool</Button>
-                            </CardContent>
-                        </Card>
-                         <Card>
-                            <CardHeader className="flex flex-row items-center justify-between pb-2">
-                                <CardTitle className="text-sm font-medium">Analytics Dashboard</CardTitle>
-                                <BarChart className="h-4 w-4 text-muted-foreground" />
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-xs text-muted-foreground mb-4">Track your performance across all platforms.</p>
-                                <Button size="sm" className="w-full">View Analytics</Button>
-                            </CardContent>
-                        </Card>
-                         <Card>
-                            <CardHeader className="flex flex-row items-center justify-between pb-2">
-                                <CardTitle className="text-sm font-medium">Media Kit Builder</CardTitle>
-                                <FileText className="h-4 w-4 text-muted-foreground" />
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-xs text-muted-foreground mb-4">Create a professional media kit for brands.</p>
-                                <Button size="sm" className="w-full">Build Your Kit</Button>
-                            </CardContent>
-                        </Card>
+                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 text-center">
+                        {toolkits.map(tool => (
+                             <Link href={tool.href} key={tool.name}>
+                                <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer">
+                                    <div className="h-8 w-8">{tool.icon}</div>
+                                    <span className="text-xs font-semibold">{tool.name}</span>
+                                </div>
+                            </Link>
+                        ))}
                     </div>
                 </CardContent>
             </Card>
