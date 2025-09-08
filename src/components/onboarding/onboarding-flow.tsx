@@ -20,7 +20,7 @@ export function OnboardingFlow() {
 
       <Card className="text-center shadow-lg">
         <CardHeader className="pb-4">
-          <CardTitle className="text-3xl font-bold font-headline">Join CollabCentral</CardTitle>
+          <CardTitle className="text-3xl font-bold font-headline">Join Social Colab</CardTitle>
           <CardDescription className="text-lg">
             First, tell us who you are.
           </CardDescription>

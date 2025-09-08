@@ -11,7 +11,7 @@ export function Cta() {
           Ready to Elevate Your Brand?
         </h2>
         <p className="mt-4 text-xl text-muted-foreground">
-          Join CollabCentral today and start building powerful partnerships that drive real results.
+          Join Social Colab today and start building powerful partnerships that drive real results.
         </p>
         <Button size="lg" className="mt-8" asChild>
             <Link href="/onboarding">Sign Up Now</Link>

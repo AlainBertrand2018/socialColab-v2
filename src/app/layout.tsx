@@ -5,8 +5,13 @@ import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
 
 export const metadata: Metadata = {
-  title: 'CollabCentral',
-  description: 'The revolutionary platform connecting brands with top-tier influencers.',
+  title: 'Social Colab',
+  description: 'Social Colab is the direct path to powerful, authentic collaborations. A zero-commission platform built to empower Mauritian and regional brands connect with a vetted community of creators.',
+  openGraph: {
+    title: 'Social Colab',
+    description: 'The 0% commision platform for Brands and Creators Colabs',
+    images: ['/images/socialColab_Creator_at_Work.webp']
+  }
 };
 
 export default function RootLayout({

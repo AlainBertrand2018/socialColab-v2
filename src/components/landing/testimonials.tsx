@@ -8,7 +8,7 @@ const testimonials = [
     title: 'Marketing Director, Bloom Co.',
     avatar: 'https://picsum.photos/id/237/100',
     dataAiHint: 'portrait professional',
-    quote: "CollabCentral revolutionized our influencer strategy. The AI discovery tool is a game-changer and saved us countless hours.",
+    quote: "Social Colab revolutionized our influencer strategy. The AI discovery tool is a game-changer and saved us countless hours.",
   },
   {
     name: 'Mike R.',
@@ -22,7 +22,7 @@ const testimonials = [
     title: 'Content Creator',
     avatar: 'https://picsum.photos/id/239/100',
     dataAiHint: 'portrait woman',
-    quote: "I love how easy it is to find brands that align with my values. CollabCentral has opened doors to partnerships I wouldn't have found otherwise.",
+    quote: "I love how easy it is to find brands that align with my values. Social Colab has opened doors to partnerships I wouldn't have found otherwise.",
   },
   {
     name: 'David Chen',
@@ -41,7 +41,7 @@ export function Testimonials() {
           Loved by Brands and <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">Influencers</span>
         </h2>
         <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
-          See what our users have to say about their experience with CollabCentral.
+          See what our users have to say about their experience with Social Colab.
         </p>
       </div>
 

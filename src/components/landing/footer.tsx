@@ -9,7 +9,7 @@ export function Footer() {
           <div className="col-span-4 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Shapes className="h-6 w-6 text-primary" />
-              <span className="font-bold text-lg font-headline">CollabCentral</span>
+              <span className="font-bold text-lg font-headline">Social Colab</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Connecting brands and influencers to create amazing content.
@@ -43,7 +43,7 @@ export function Footer() {
         </div>
         <div className="mt-12 pt-8 border-t flex justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} CollabCentral. All rights reserved.
+            &copy; {new Date().getFullYear()} Social Colab. All rights reserved.
           </p>
           <div className="flex gap-4">
             <Link href="#" className="text-muted-foreground hover:text-foreground"><Twitter size={18} /></Link>
