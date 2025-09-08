@@ -10,7 +10,7 @@ export function WaitlistDialog({ trigger }: { trigger: React.ReactNode }) {
       </DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center">Join the Waitlist</DialogTitle>
+          <DialogTitle className="text-2xl font-bold text-center text-primary">Join the Waitlist</DialogTitle>
           <DialogDescription className="text-center">
             Sign up to be the first to know when we launch.
           </DialogDescription>
