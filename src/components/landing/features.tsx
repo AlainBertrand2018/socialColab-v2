@@ -80,8 +80,8 @@ export function Features() {
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
             How It Works
             </h2>
-            <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
-            A place where Brands and vetted Creators meet, discuss and make deals over exciting campaigns, focusing on community spirit while offering AI-powered solutions.
+            <p className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground font-headline">
+            We are a place where Brands and vetted Creators meet, discuss and make deals over exciting campaigns, focusing on community spirit while offering AI-powered solutions.
             </p>
         </div>
 
