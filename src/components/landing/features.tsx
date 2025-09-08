@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { WaitlistForm } from './waitlist-form';
 
 const brandBenefits = [
   {
@@ -74,7 +76,6 @@ const BenefitCard = ({ image, dataAiHint, title, description, alt }: { image: st
 export function Features() {
   return (
     <section id="showcase" className="py-24 sm:py-32 bg-secondary relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[30rem] w-[30rem] bg-accent/10 rounded-full blur-3xl -z-10"></div>
       <div className="container">
         <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
@@ -106,7 +107,20 @@ export function Features() {
           </TabsContent>
         </Tabs>
         <div className="text-center mt-16">
-          <Button size="lg">Join The Waitlist</Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg">Join The Waitlist</Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-md">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold text-center">Join the Waitlist</DialogTitle>
+                <DialogDescription className="text-center">
+                  Sign up to be the first to know when we launch.
+                </DialogDescription>
+              </DialogHeader>
+              <WaitlistForm />
+            </DialogContent>
+          </Dialog>
         </div>
       </div>
     </section>
