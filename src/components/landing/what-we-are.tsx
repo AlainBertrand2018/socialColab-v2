@@ -18,7 +18,7 @@ export function WhatWeAre() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h2 className="text-3xl md:text-4xl font-bold font-headline">What We Are</h2>
-          <p className="mt-4 text-lg text-muted-foreground font-headline font-light">
+          <p className="mt-4 text-base text-muted-foreground font-headline font-light">
             Social Colab is your direct path to powerful, authentic collaborations. We're a zero-commission platform built to help local and regional brands connect with a vetted community of creators.
           </p>
           <p className="mt-4 text-lg text-muted-foreground">
