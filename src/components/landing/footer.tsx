@@ -11,7 +11,7 @@ export function Footer() {
           <div className="col-span-4 md:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <Image src="/images/socialColab_blu_1024.webp" alt="Social Colab Logo" width={24} height={24} className="h-6 w-6" />
-              <span className="font-bold text-lg font-headline">Social Colab</span>
+              <span className="font-bold text-lg font-headline text-primary">Social Colab</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               Connecting brands and influencers to create amazing content.
