@@ -16,7 +16,6 @@ import { TadeoDialog } from '@/components/tadeo/tadeo-dialog';
 
 
 const toolkits = [
-    { name: 'AI Content Genie', icon: <Bot />, href: '#', tooltip: "Generate Quality Audiovisual Content" },
     { name: 'Analytics', icon: <BarChart />, href: '#', tooltip: "Take A Snapshot Of How Your Campaign Is Doing" },
     { name: 'Media Kit Builder', icon: <FileText />, href: '#', tooltip: "Organize Your Audiovisual Assets For Deployment" },
     { name: 'Campaign Manager', icon: <Briefcase />, href: '#', tooltip: "Organize Your Campaign as a Full Fledged Project" },
@@ -57,10 +56,17 @@ export default function ForCreatorsPage() {
                         <div className="flex items-center justify-center text-center gap-4">
                             <TadeoDialog 
                                 trigger={
-                                    <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer w-24">
-                                        <div className="h-8 w-8"><Bot /></div>
-                                        <span className="text-xs font-semibold">Ask Tadeo</span>
-                                    </div>
+                                    <Tooltip>
+                                        <TooltipTrigger asChild>
+                                            <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer w-24">
+                                                <div className="h-8 w-8"><Bot /></div>
+                                                <span className="text-xs font-semibold">Ask Tadeo</span>
+                                            </div>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p>Your AI Marketing Assistant</p>
+                                        </TooltipContent>
+                                    </Tooltip>
                                 }
                             />
                             {toolkits.map(tool => (

@@ -10,7 +10,7 @@
 
 import {ai} from '@/ai/genkit';
 import {devLocalIndexerRef, devLocalRetrieverRef} from '@genkit-ai/dev-local-vectorstore';
-import {Document, defineFlow, definePrompt, genkit} from 'genkit';
+import {Document, defineFlow, definePrompt} from 'genkit';
 import {z} from 'zod';
 import * as fs from 'fs/promises';
 import * as path from 'path';
@@ -67,7 +67,11 @@ async function indexKnowledgeBase() {
 
     console.log('Knowledge base indexed successfully.');
   } catch (error) {
-    console.error('Error indexing knowledge base:', error);
+    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
+      console.log('Knowledge base directory not found. Skipping indexing.');
+    } else {
+      console.error('Error indexing knowledge base:', error);
+    }
   }
 }
 
