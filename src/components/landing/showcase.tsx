@@ -60,7 +60,7 @@ const CreatorCard = ({ creator }: { creator: CreatorProfile }) => {
 
 export function Showcase() {
   const [selectedNiche, setSelectedNiche] = React.useState('All');
-  const niches = ['All', ...Array.from(new Set(creators.map(c => c.niche)))];
+  const niches = ['All', ...Array.from(new Set(creators.map(c => c.niche)))].slice(0, 4);
   const filteredCreators = selectedNiche === 'All' ? creators : creators.filter(c => c.niche === selectedNiche);
 
   return (
