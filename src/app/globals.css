@@ -86,3 +86,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .container {
+    @apply w-[80vw] mx-auto max-w-[1920px] md:w-[70vw];
+  }
+}
