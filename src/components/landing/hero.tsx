@@ -4,12 +4,13 @@ import { Button } from '@/components/ui/button';
 
 export function Hero() {
   return (
-    <section className="relative w-full py-20 md:py-32">
+    <section className="relative w-full">
       {/* Background Layer */}
+      <div className="absolute inset-0 w-full h-full bg-background -z-20"></div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 bg-primary/20 rounded-full blur-3xl -z-10"></div>
 
       {/* Content Layer */}
-      <div className="container grid lg:grid-cols-2 place-items-center gap-10">
+      <div className="container py-20 md:py-32 grid lg:grid-cols-2 place-items-center gap-10">
         <div className="text-center lg:text-start space-y-6">
           <main className="text-5xl md:text-6xl font-bold font-headline">
             <h1 className="inline">
@@ -36,7 +37,7 @@ export function Hero() {
         {/* Front Image Layer / Right side content */}
         <div className="z-10">
           <Image
-            src="https://picsum.photos/1200/800"
+            src="https://images.unsplash.com/photo-1716322603195-2fbb04f132cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyMHx8Y3JlYXRvciUyMGNvbnRlbnR8ZW58MHx8fHwxNzU3MzAyOTcwfDA&ixlib=rb-4.1.0&q=80&w=1080"
             width={1200}
             height={800}
             className="rounded-lg shadow-2xl"
