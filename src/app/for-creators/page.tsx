@@ -12,6 +12,7 @@ import { JobCard } from '@/components/landing/job-card';
 import { Bot, BarChart, FileText, Briefcase, Calendar, MessageSquare, Settings } from 'lucide-react';
 import Link from 'next/link';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { TadeoDialog } from '@/components/tadeo/tadeo-dialog';
 
 
 const toolkits = [
@@ -53,7 +54,15 @@ export default function ForCreatorsPage() {
                 </CardHeader>
                 <CardContent>
                     <TooltipProvider>
-                        <div className="flex items-center justify-between text-center">
+                        <div className="flex items-center justify-center text-center gap-4">
+                            <TadeoDialog 
+                                trigger={
+                                    <div className="p-4 rounded-lg bg-secondary hover:bg-primary/10 hover:text-primary transition-colors flex flex-col items-center justify-center gap-2 aspect-square cursor-pointer w-24">
+                                        <div className="h-8 w-8"><Bot /></div>
+                                        <span className="text-xs font-semibold">Ask Tadeo</span>
+                                    </div>
+                                }
+                            />
                             {toolkits.map(tool => (
                                 <Tooltip key={tool.name}>
                                     <TooltipTrigger asChild>
