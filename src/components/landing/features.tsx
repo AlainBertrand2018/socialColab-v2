@@ -87,8 +87,8 @@ export function Features() {
 
         <Tabs defaultValue="brands" className="w-full">
           <TabsList className="grid w-full grid-cols-2 md:w-1/2 mx-auto">
-            <TabsTrigger value="brands">For Brands</TabsTrigger>
-            <TabsTrigger value="creators">For Creators</TabsTrigger>
+            <TabsTrigger value="brands" className="font-headline">For Brands</TabsTrigger>
+            <TabsTrigger value="creators" className="font-headline">For Creators</TabsTrigger>
           </TabsList>
           <TabsContent value="brands">
             <div className="grid md:grid-cols-3 gap-8 mt-12">
