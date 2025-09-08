@@ -48,7 +48,7 @@ export function WaitlistForm() {
         <Lightbulb className="h-4 w-4" />
         <AlertTitle>LIMITED EXCLUSIVE FOUNDER's OFFER for our first 100 registrants</AlertTitle>
         <AlertDescription>
-          For our first 100 registrants Join our waitlist and provide feedback to get a special flat-fee of Rs 500/month, for lifetime access as a thank you from us.
+          Join our waitlist and provide feedback to get a special flat-fee of <strong>Rs 500/month</strong>, for lifetime access as a thank you from us.
         </AlertDescription>
       </Alert>
       <Form {...form}>
