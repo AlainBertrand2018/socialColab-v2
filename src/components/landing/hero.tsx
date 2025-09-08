@@ -25,7 +25,7 @@ export function Hero() {
         <div className="text-center space-y-6">
           <main className="text-5xl md:text-6xl font-bold font-headline text-white">
             <h1 className="inline">
-              <span className="inline bg-gradient-to-r from-primary via-purple-500 to-accent bg-clip-text text-transparent">
+              <span className="text-white">
                 Connect.
               </span>{' '}
               Collaborate.
