@@ -13,7 +13,7 @@ export function Jobs() {
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
                     Active Campaigns
                 </h2>
-                <div className="md:w-3/4 mx-auto mt-4 text-xl text-muted-foreground">
+                <div className="md:w-3/4 mx-auto mt-4 text-lg text-muted-foreground font-headline font-light">
                     Find the perfect opportunity to collaborate with leading Mauritian brands.
                 </div>
             </div>
