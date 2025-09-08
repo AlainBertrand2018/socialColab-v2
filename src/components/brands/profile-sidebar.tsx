@@ -37,7 +37,7 @@ export function ProfileSidebar({ brand }: { brand: BrandProfile }) {
               value={`${brand.campaignBudget.min.toLocaleString()} - ${brand.campaignBudget.max.toLocaleString()} ${brand.campaignBudget.currency}`} 
             />
         </CardContent>
-      </a_body>
+      </Card>
 
       <Card>
         <CardHeader>
