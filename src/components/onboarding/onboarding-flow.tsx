@@ -18,13 +18,10 @@ export function OnboardingFlow() {
 
   return (
     <div className="max-w-2xl mx-auto space-y-8">
-        <Alert className="bg-accent/10 border-accent text-accent-foreground">
-            <Lightbulb className="h-4 w-4" />
-            <AlertTitle className="font-bold text-foreground/90 font-headline">EXCLUSIVE FOUNDER's OFFER</AlertTitle>
-            <AlertDescription>
-            <p className="font-headline text-foreground/90">For a limited time, our first 100 registered users will get lifetime access for a special flat-fee of <strong>Rs 500/month</strong> as a thank you from us for being an early believer.</p>
-            </AlertDescription>
-        </Alert>
+        <div className="text-center py-8">
+            <h2 className="font-bold text-3xl font-headline text-foreground/90">EXCLUSIVE FOUNDER'S OFFER</h2>
+            <p className="font-headline text-foreground/90 mt-2">For a limited time, our first 100 registered users will get lifetime access for a special flat-fee of <strong>Rs 500/month</strong> as a thank you from us for being an early believer.</p>
+        </div>
 
       <Card className="text-center shadow-lg">
         <CardHeader className="pb-4">
@@ -58,13 +55,13 @@ export function OnboardingFlow() {
       </Card>
       
       <Collapsible open={openCollapse === 'creator'} className="overflow-hidden">
-        <CollapsibleContent className="transition-all duration-300 ease-in-out data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+        <CollapsibleContent className="transition-all duration-300 ease-in-out data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down-long">
             <CreatorOnboardingForm />
         </CollapsibleContent>
       </Collapsible>
 
       <Collapsible open={openCollapse === 'brand'} className="overflow-hidden">
-        <CollapsibleContent className="transition-all duration-300 ease-in-out data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+        <CollapsibleContent className="transition-all duration-300 ease-in-out data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down-long">
             <BrandOnboardingForm />
         </CollapsibleContent>
       </Collapsible>
