@@ -5,7 +5,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import { Users, Youtube, Instagram } from 'lucide-react';
 import { TikTokIcon } from '@/components/icons/tiktok';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { ProfileHeader } from '../creators/profile-header';
 import { ProfileSidebar } from '../creators/profile-sidebar';
 import { MainContent } from '../creators/main-content';
@@ -56,6 +56,9 @@ export const CreatorCard = ({ creator }: { creator: CreatorProfile }) => {
             </Card>
         </DialogTrigger>
         <DialogContent className="max-w-7xl h-[90vh] p-0">
+            <DialogHeader>
+              <DialogTitle className="sr-only">{creator.name}'s Profile</DialogTitle>
+            </DialogHeader>
             <div className="bg-background min-h-screen rounded-lg overflow-y-auto">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     <ProfileHeader creator={creator} />
@@ -75,4 +78,3 @@ export const CreatorCard = ({ creator }: { creator: CreatorProfile }) => {
     </Dialog>
   );
 };
-
