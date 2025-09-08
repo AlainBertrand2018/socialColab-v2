@@ -1,5 +1,16 @@
+"use client";
+
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { FeedbackForm } from './feedback-form';
 
 export function WhatWeAre() {
   return (
@@ -13,7 +24,20 @@ export function WhatWeAre() {
           <p className="mt-4 text-lg text-muted-foreground">
             Unlike traditional platforms, we do not take a cut of your deals. Our mission is to empower you to build genuine partnerships, allowing your entire budget to go directly toward sparking impactful campaigns and measurable results. It's time to co-create, launch, and grow—without the middleman.
           </p>
-          <Button size="lg" className="mt-8">Give Us Your Feedback</Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg" className="mt-8">Give Us Your Feedback</Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle>Give us your feedback</DialogTitle>
+                <DialogDescription>
+                  We'd love to hear your thoughts on our platform.
+                </DialogDescription>
+              </DialogHeader>
+              <FeedbackForm />
+            </DialogContent>
+          </Dialog>
         </div>
         <Image
           src="/images/zero_comm_platform.webp"
