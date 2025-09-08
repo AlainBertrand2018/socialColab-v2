@@ -138,7 +138,7 @@ export const creators: CreatorProfile[] = [
         reach: 50000,
         maxViews: 100000,
     },
-    fees: { min: 100, max: 300, currency: 'USD' },
+    fees: { min: 4500, max: 13500, currency: 'MUR' },
     portfolio: [
         { src: 'https://picsum.photos/seed/p4-1/800/600', aiHint: 'kitesurfing action', alt: 'David kitesurfing at Le Morne' },
         { src: 'https://picsum.photos/seed/p4-2/800/600', aiHint: 'watersports gear', alt: 'Close up of kitesurfing equipment' },
@@ -224,7 +224,7 @@ export const creators: CreatorProfile[] = [
         reach: 250000,
         maxViews: 500000,
     },
-    fees: { min: 150, max: 400, currency: 'USD' },
+    fees: { min: 6750, max: 18000, currency: 'MUR' },
     portfolio: [
         { src: 'https://picsum.photos/seed/p7-1/800/600', aiHint: 'gaming setup', alt: 'Jade\'s neon-lit gaming setup' },
         { src: 'https://picsum.photos/seed/p7-2/800/600', aiHint: 'gamer portrait', alt: 'Jade wearing a gaming headset' },
@@ -308,7 +308,7 @@ export const creators: CreatorProfile[] = [
       reach: 70000,
       maxViews: 100000,
     },
-    fees: { min: 200, max: 600, currency: 'USD' },
+    fees: { min: 9000, max: 27000, currency: 'MUR' },
     portfolio: [
       { src: 'https://picsum.photos/seed/p10-1/800/600', aiHint: 'business meeting', alt: 'Alexandre giving a presentation' },
       { src: 'https://picsum.photos/seed/p10-2/800/600', aiHint: 'stock chart', alt: 'A screen showing financial charts' },
@@ -420,7 +420,7 @@ export const creators: CreatorProfile[] = [
       reach: 100000,
       maxViews: 180000,
     },
-    fees: { min: 150, max: 500, currency: 'USD' },
+    fees: { min: 6750, max: 22500, currency: 'MUR' },
     portfolio: [
       { src: 'https://picsum.photos/seed/p14-1/600/800', aiHint: 'man working out', alt: 'Kevin lifting weights in a gym' },
       { src: 'https://picsum.photos/seed/p14-2/800/600', aiHint: 'healthy meal', alt: 'A prepared healthy meal' },
