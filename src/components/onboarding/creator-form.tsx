@@ -16,8 +16,7 @@ import { CreatorFormPage2 } from "./creator/page-two";
 import { CreatorFormPage3 } from "./creator/page-three";
 import { CreatorFormPage4 } from "./creator/page-four";
 
-const creatorFormSchema = z.object({
-  // Page 1
+const page1Schema = z.object({
   profilePicture: z.any().optional(),
   email: z.string().email("Please enter a valid email address."),
   fullName: z.string().min(2, "Full name must be at least 2 characters."),
@@ -33,8 +32,9 @@ const creatorFormSchema = z.object({
   primaryEngagementRate: z.coerce.number().min(0),
   primaryMaxViews: z.coerce.number().min(0),
   primaryTopLocations: z.array(z.string()).optional(),
+});
 
-  // Page 2
+const page2Schema = z.object({
   otherPlatforms: z.array(z.object({
     platform: z.string().min(2, "Please select a platform."),
     handle: z.string().min(2, "Please enter a handle.").refine(val => val.startsWith('@'), { message: "Handle must start with @" }),
@@ -45,8 +45,9 @@ const creatorFormSchema = z.object({
     maxViews: z.coerce.number().min(0),
     topLocations: z.array(z.string()).optional(),
   })).optional(),
+});
 
-  // Page 3
+const page3Schema = z.object({
   primaryNiche: z.string({ required_error: "Please select your primary niche." }),
   mainActivity: z.string({ required_error: "Please select your main activity." }),
   pricing: z.object({
@@ -57,8 +58,9 @@ const creatorFormSchema = z.object({
     sponsoredHowTos: z.coerce.number().optional(),
     ambassadorship: z.coerce.number().optional(),
   }).optional(),
+});
 
-  // Page 4
+const page4Schema = z.object({
   portfolio: z.array(z.object({
     title: z.string().min(2, "Job title is required."),
     description: z.string().min(10, "Description is too short."),
@@ -66,9 +68,14 @@ const creatorFormSchema = z.object({
   })).min(2, "At least two portfolio samples are required."),
 });
 
+const creatorFormSchema = page1Schema.merge(page2Schema).merge(page3Schema).merge(page4Schema);
+
+
 export type CreatorFormValues = z.infer<typeof creatorFormSchema>;
 
 const TOTAL_PAGES = 4;
+
+const pageSchemas = [page1Schema, page2Schema, page3Schema, page4Schema];
 
 export function CreatorOnboardingForm() {
   const { toast } = useToast();
@@ -88,7 +95,10 @@ export function CreatorOnboardingForm() {
       primaryMaxViews: 0,
       otherPlatforms: [],
       pricing: {},
-      portfolio: [],
+      portfolio: [
+          { title: '', description: '', files: null },
+          { title: '', description: '', files: null }
+      ],
     },
     mode: "onChange",
   });
@@ -108,7 +118,10 @@ export function CreatorOnboardingForm() {
   ];
 
   const handleNext = async () => {
-    const isValid = await form.trigger();
+    const currentSchema = pageSchemas[currentPage - 1];
+    const fieldsToValidate = Object.keys(currentSchema.shape);
+    const isValid = await form.trigger(fieldsToValidate as any);
+
     if (isValid) {
       setCurrentPage((prev) => Math.min(prev + 1, TOTAL_PAGES));
     }
