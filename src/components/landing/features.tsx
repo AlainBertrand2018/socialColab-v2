@@ -14,7 +14,7 @@ const brandBenefits = [
     description: 'Stop guessing. Our intelligent algorithm connects you with influencers whose audience perfectly matches your target demographic.',
   },
   {
-    image: '/images/SocialColab_analytics.webp',
+    image: '/images/socialColab_from_Start.webp',
     dataAiHint: 'team collaboration',
     alt: 'Illustration of team collaboration',
     title: 'Seamless Campaign Management',
