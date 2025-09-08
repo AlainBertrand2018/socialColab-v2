@@ -22,7 +22,7 @@ export function Header() {
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
           <Image src="/images/socialColab_blu_1024.webp" alt="Social Colab Logo" width={24} height={24} className="h-6 w-6" />
-          <span className="hidden font-bold sm:inline-block font-headline">Social Colab</span>
+          <span className="hidden font-bold sm:inline-block font-headline text-primary">Social Colab</span>
         </Link>
         <nav className="hidden md:flex md:items-center md:gap-6 text-sm">
           {navLinks.map((link) => (
@@ -50,7 +50,7 @@ export function Header() {
                 <div className="mb-8">
                   <Link href="/" className="mr-6 flex items-center space-x-2" onClick={() => setOpen(false)}>
                     <Image src="/images/socialColab_blu_1024.webp" alt="Social Colab Logo" width={24} height={24} className="h-6 w-6" />
-                    <span className="font-bold font-headline">Social Colab</span>
+                    <span className="font-bold font-headline text-primary">Social Colab</span>
                   </Link>
                 </div>
                 <nav className="flex flex-col gap-6 text-lg font-medium">
