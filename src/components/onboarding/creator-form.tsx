@@ -146,7 +146,7 @@ export function CreatorOnboardingForm() {
       title: "Welcome aboard!",
       description: "Your creator profile has been created.",
     });
-    router.push('/for-creators');
+    router.push(`/for-creators?handle=${data.primaryPlatformHandle}`);
   }
 
   const progress = (currentPage / TOTAL_PAGES) * 100;

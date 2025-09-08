@@ -6,14 +6,16 @@ import { creators } from "@/lib/creator-data";
 import { CreatorCard } from "@/components/landing/creator-card";
 
 
-export default function ForCreatorsPage() {
+export default function ForCreatorsPage({ searchParams }: { searchParams: { handle?: string } }) {
     const showcasedCreators = creators.slice(0, 3);
+    const handle = searchParams.handle || 'Creator';
+
   return (
     <div className="bg-background min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="space-y-8">
             <div className="bg-card border rounded-lg p-8">
-                <h1 className="text-4xl font-bold font-headline text-foreground">Welcome, Creator!</h1>
+                <h1 className="text-4xl font-bold font-headline text-foreground">Welcome, {handle}!</h1>
                 <p className="text-muted-foreground mt-2 text-lg">Your dashboard for finding brand collaborations and managing your profile.</p>
             </div>
 
