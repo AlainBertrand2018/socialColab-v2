@@ -21,7 +21,7 @@ export function WhatWeAre() {
           <p className="mt-4 text-base text-muted-foreground font-headline font-light">
             Social Colab is your direct path to powerful, authentic collaborations. We're a zero-commission platform built to help local and regional brands connect with a vetted community of creators.
           </p>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground font-headline font-light">
             Unlike traditional platforms, we do not take a cut of your deals. Our mission is to empower you to build genuine partnerships, allowing your entire budget to go directly toward sparking impactful campaigns and measurable results. It's time to co-create, launch, and grow—without the middleman.
           </p>
           <Dialog>
