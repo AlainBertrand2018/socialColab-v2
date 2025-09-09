@@ -2,10 +2,22 @@
 {
   "navigation": {
     "navLinks": [
-      { "name": "Fonksyonalite", "href": "#features" },
-      { "name": "Kanpagn", "href": "#jobs" },
-      { "name": "Pri", "href": "#pricing" },
-      { "name": "Temwanyaz", "href": "#testimonials" }
+      {
+        "name": "Fonksyonalite",
+        "href": "#features"
+      },
+      {
+        "name": "Kanpagn",
+        "href": "#jobs"
+      },
+      {
+        "name": "Pri",
+        "href": "#pricing"
+      },
+      {
+        "name": "Temwanyaz",
+        "href": "#testimonials"
+      }
     ],
     "auth": {
       "login": "Rantre",
@@ -68,7 +80,12 @@
   "showcase": {
     "title": "Zwenn Nou Bann Kreater",
     "subtitle": "Dekouver bann talan ki kapav fer ou mark rezone.",
-    "filters": ["Tou", "Sustainable Living", "Drone Videography", "Manze"],
+    "filters": [
+      "Tou",
+      "Sustainable Living",
+      "Drone Videography",
+      "Manze"
+    ],
     "cta": "Discover More Creators"
   },
   "jobs": {
@@ -142,24 +159,48 @@
     "product": {
       "title": "Prodwi",
       "links": [
-        { "name": "Fonksyonalite", "href": "#features" },
-        { "name": "Pri", "href": "#pricing" },
-        { "name": "Temwanyaz", "href": "#testimonials" }
+        {
+          "name": "Fonksyonalite",
+          "href": "#features"
+        },
+        {
+          "name": "Pri",
+          "href": "#pricing"
+        },
+        {
+          "name": "Temwanyaz",
+          "href": "#testimonials"
+        }
       ]
     },
     "company": {
       "title": "Konpanyi",
       "links": [
-        { "name": "Ki Nou Ete", "href": "#what-we-are" },
-        { "name": "Travay", "href": "#" },
-        { "name": "Kontak", "href": "#" }
+        {
+          "name": "Ki Nou Ete",
+          "href": "#what-we-are"
+        },
+        {
+          "name": "Travay",
+          "href": "#"
+        },
+        {
+          "name": "Kontak",
+          "href": "#"
+        }
       ]
     },
     "legal": {
       "title": "Legal",
       "links": [
-        { "name": "Politik Konfidansyalite", "href": "#" },
-        { "name": "Kondisyon Servis", "href": "#" }
+        {
+          "name": "Politik Konfidansyalite",
+          "href": "#"
+        },
+        {
+          "name": "Kondisyon Servis",
+          "href": "#"
+        }
       ]
     }
   }
