@@ -48,7 +48,7 @@ export function Footer() {
             &copy; {new Date().getFullYear()} Alain BERTRAND. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="#" className="text-muted-foreground hover:text-foreground"><Twitter size={18} /></Link>
+            <Link href="https://twitter.com/AlainBertrandmu/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground"><Twitter size={18} /></Link>
             <Link href="#" className="text-muted-foreground hover:text-foreground"><Linkedin size={18} /></Link>
             <Link href="#" className="text-muted-foreground hover:text-foreground"><Instagram size={18} /></Link>
           </div>
