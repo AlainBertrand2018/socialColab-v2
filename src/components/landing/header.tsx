@@ -9,7 +9,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Image from 'next/image';
 
 const navLinks = [
-  { name: 'Features', href: '#features' },
+  { name: 'Features', href: '/#features' },
   { name: 'Campaigns', href: '#jobs' },
   { name: 'Testimonials', href: '#testimonials' },
 ];
