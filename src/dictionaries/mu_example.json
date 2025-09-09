@@ -1,0 +1,113 @@
+
+{
+    "features": {
+        "title": "We Have Powerful AI-driven Toolkits for Everyone",
+        "subtitle": "Whether you're a brand looking to scale or a creator ready to shine, our platform provides the tools you need to succeed.",
+        "tabs": {
+            "brands": "For Brands",
+            "creators": "For Creators"
+        },
+        "benefits": {
+            "brands": [
+                {
+                    "title": "AI-Powered Discovery",
+                    "description": "Stop guessing. Our intelligent algorithm connects you with influencers whose audience perfectly matches your target demographic."
+                },
+                {
+                    "title": "Seamless Campaign Management",
+                    "description": "From initial outreach to final payment, manage your entire campaign workflow in one place. Our integrated tools make collaboration effortless."
+                },
+                {
+                    "title": "Real-Time Analytics",
+                    "description": "Track your campaign performance with our intuitive dashboard. Measure ROI, engagement rates, and follower growth to optimize your strategy."
+                }
+            ],
+            "creators": [
+                {
+                    "title": "Discover Authentic Brands",
+                    "description": "Connect with brands that align with your values and content. Our platform helps you find meaningful, long-term partnerships."
+                },
+                {
+                    "title": "Showcase Your Portfolio",
+                    "description": "Create a stunning profile that acts as your digital media kit. Highlight your best work and audience demographics to attract your dream brands."
+                },
+                {
+                    "title": "Streamlined & Secure Deals",
+                    "description": "Manage your proposals, contracts, and payments all in one place. Our secure system ensures you get paid on time, every time."
+                }
+            ]
+        },
+        "cta": "Get Started Today"
+    },
+    "showcase": {
+        "title": "Meet Our Vetted Creators",
+        "subtitle": "Discover talented individuals ready to bring your brand's story to life.",
+        "filters": [ "All", "Sustainable Living", "Drone Videography", "Food" ]
+    },
+    "jobs": {
+        "title": "Active Campaigns",
+        "subtitle": "Find the perfect opportunity to collaborate with leading Mauritian brands.",
+        "cta": "Discover More Jobs"
+    },
+    "pricing": {
+        "title": "Choose Your Plan",
+        "subtitle": "Simple, transparent pricing. No hidden fees. Ever.",
+        "tiers": [
+            {
+                "name": "Free",
+                "price": "Free",
+                "priceDescription": "",
+                "priceCreators": "",
+                "priceCreatorsDescription": "",
+                "description": "Limited access",
+                "features": [
+                    "Limited access to tool kits",
+                    "Limited collaboration opportunities",
+                    "Basic Profile",
+                    "Standard Support"
+                ],
+                "buttonText": "Get Started"
+            },
+            {
+                "name": "Standard",
+                "price": "Rs 2500",
+                "priceDescription": "per month for brands",
+                "priceCreators": "Rs 1500",
+                "priceCreatorsDescription": "per month for creators",
+                "description": "For growing businesses & creators",
+                "features": [
+                    "Access to all tool kits (Rs 400 per use)",
+                    "Full collaboration opportunities",
+                    "Enhanced Profile",
+                    "Priority Support"
+                ],
+                "buttonText": "Choose Standard",
+                "popular": "Most Popular"
+            },
+            {
+                "name": "Pro",
+                "price": "Rs 24,000",
+                "priceDescription": "per year for brands",
+                "priceCreators": "Rs 15,000",
+                "priceCreatorsDescription": "per year for creators",
+                "description": "For growing businesses & creators",
+                "features": [
+                    "Unlimited AI Toolkits",
+                    "Bespoke collaboration opportunities",
+                    "Featured Profile",
+                    "Dedicated Support"
+                ],
+                "buttonText": "Go Pro"
+            }
+        ]
+    },
+    "testimonials": {
+        "title": "Loved by Brands and Influencers",
+        "subtitle": "See what our users have to say about their experience with Social Colab."
+    },
+    "cta": {
+        "title": "Ready to Elevate Your Brand?",
+        "subtitle": "Join Social Colab today and start building powerful partnerships that drive real results.",
+        "buttonText": "Sign Up Now"
+    }
+}

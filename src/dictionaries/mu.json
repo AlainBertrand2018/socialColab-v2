@@ -3,7 +3,7 @@
   "navigation": {
     "navLinks": [
       {
-        "name": "karakteristik",
+        "name": "Fonksyonalite",
         "href": "#features"
       },
       {
@@ -33,37 +33,37 @@
     }
   },
   "footer": {
-    "tagline": "Connecting local brands and influencers to create amazing content.",
+    "tagline": "Nou konekte bann mark ek bann inflianserr lokal pou ki zot kapav kree bann mari kanpagn.",
     "product": {
-      "title": "Product",
+      "title": "Prodwi",
       "links": [
         {
-          "name": "Features",
+          "name": "Fonksyonalite",
           "href": "#features"
         },
         {
-          "name": "Pricing",
+          "name": "Pri",
           "href": "#pricing"
         },
         {
-          "name": "Testimonials",
+          "name": "Temwanyaz",
           "href": "#testimonials"
         }
       ]
     },
     "company": {
-      "title": "Company",
+      "title": "Konpanyi",
       "links": [
         {
-          "name": "About Us",
+          "name": "Ki Nou Ete",
           "href": "#what-we-are"
         },
         {
-          "name": "Careers",
+          "name": "Travay",
           "href": "#"
         },
         {
-          "name": "Contact",
+          "name": "Kontak",
           "href": "#"
         }
       ]
@@ -72,11 +72,11 @@
       "title": "Legal",
       "links": [
         {
-          "name": "Privacy Policy",
+          "name": "Politik Konfidansyalite",
           "href": "#"
         },
         {
-          "name": "Terms of Service",
+          "name": "Kondisyon Servis",
           "href": "#"
         }
       ]
