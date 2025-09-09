@@ -1,113 +1,113 @@
 
 {
     "features": {
-        "title": "We Have Powerful AI-driven Toolkits for Everyone",
-        "subtitle": "Whether you're a brand looking to scale or a creator ready to shine, our platform provides the tools you need to succeed.",
+        "title": "Nou Ena Enn Bann Mari Zouti lintelizans artifisyel Pour Tou Dimounn",
+        "subtitle": "Ki ou enn bizness ki pe anvi grandi so bann mark, ki ou enn inflianserr ki pe met lor porte pou kass pake, nou platform kapav fourni ban zouti ki ou bizin pou reisi.",
         "tabs": {
-            "brands": "For Brands",
-            "creators": "For Creators"
+            "brands": "Ou ena enn Bizness ?",
+            "creators": "Ou enn Inflianserr ? "
         },
         "benefits": {
             "brands": [
                 {
-                    "title": "AI-Powered Discovery",
-                    "description": "Stop guessing. Our intelligent algorithm connects you with influencers whose audience perfectly matches your target demographic."
+                    "title": "Servi Lintelizans Artifisyel",
+                    "description": "Aret reflesi ! Nou bann sistem intelizan kapav fer ou zwenn avek bann inflianserr ki zot lodians koresponn parfetman avek ou bann sib demografik."
                 },
                 {
-                    "title": "Seamless Campaign Management",
-                    "description": "From initial outreach to final payment, manage your entire campaign workflow in one place. Our integrated tools make collaboration effortless."
+                    "title": "Zerr Ou Bann Kanpagn San Traka",
+                    "description": "Depi koumansman ziska finisyon, ou pou ena kapasite zerr ou kanpagn depi en sell landrwa. Our integrated tools make collaboration effortless."
                 },
                 {
-                    "title": "Real-Time Analytics",
-                    "description": "Track your campaign performance with our intuitive dashboard. Measure ROI, engagement rates, and follower growth to optimize your strategy."
+                    "title": "Analiz... an-plas-an-plas",
+                    "description": "Swiv performans ou bann kanpagn lor nou bann tablo de bor. Mezir ou retour lor ou linvestissman, nivo langazman piblik avek ou bann mark, krwasans la kantite ou bann 'followers' pou ki ou kapav dress ou stratezi."
                 }
             ],
             "creators": [
                 {
-                    "title": "Discover Authentic Brands",
-                    "description": "Connect with brands that align with your values and content. Our platform helps you find meaningful, long-term partnerships."
+                    "title": "Vinn Dekouver Bann Mark Otantik",
+                    "description": "Konekte avek bann mark ki anlinye avek ou bann valerr ek valerr ou bann konteni. Nou platform pou ed ou trouv bann partenarya long term, ki valab."
                 },
                 {
-                    "title": "Showcase Your Portfolio",
-                    "description": "Create a stunning profile that acts as your digital media kit. Highlight your best work and audience demographics to attract your dream brands."
+                    "title": "Montre Ki Ou Ena Dan Ou Vant",
+                    "description": "Kree enn mari profil ki pou kouma ou kit media dizital. Ou pou kapav montre ou meyer travay ek demografi ou lodians pou atir bann mark ki ou pe reve pou travay ar zot."
                 },
                 {
-                    "title": "Streamlined & Secure Deals",
-                    "description": "Manage your proposals, contracts, and payments all in one place. Our secure system ensures you get paid on time, every time."
+                    "title": "Montt Bann Deal An Toutt Sekirite",
+                    "description": "Zerr ou bann propozisyon, oou bann kontra, ek peyman tou dan enn sel plas. Avek nou sistem, ou pou san sekirize fer sir ki ou gagn lapey a ler, sak fwa."
                 }
             ]
         },
-        "cta": "Get Started Today"
+        "cta": "Anou Koumanse"
     },
     "showcase": {
-        "title": "Meet Our Vetted Creators",
-        "subtitle": "Discover talented individuals ready to bring your brand's story to life.",
+        "title": "Vinn Zwenn avek nou bann Kreaterr Meet Our Vetted Creators",
+        "subtitle": "Dekouver bann talan ki kapav fer ou bann mark rezone.",
         "filters": [ "All", "Sustainable Living", "Drone Videography", "Food" ]
     },
     "jobs": {
-        "title": "Active Campaigns",
-        "subtitle": "Find the perfect opportunity to collaborate with leading Mauritian brands.",
-        "cta": "Discover More Jobs"
+        "title": "Kanpagn Aktif",
+        "subtitle": "A la enn bann lokazyion pou kolabor avek bann gran mark morisyin.",
+        "cta": "Dekouverr bann lezot 'job'"
     },
     "pricing": {
-        "title": "Choose Your Plan",
-        "subtitle": "Simple, transparent pricing. No hidden fees. Ever.",
+        "title": "Swazir to Plan",
+        "subtitle": "Enn 'pricing' Sinp, transparan. Okenn fre kasyett ! Zame.",
         "tiers": [
             {
-                "name": "Free",
-                "price": "Free",
+                "name": "Gratis",
+                "price": "Gratis",
                 "priceDescription": "",
                 "priceCreators": "",
                 "priceCreatorsDescription": "",
-                "description": "Limited access",
+                "description": "Akse Limite",
                 "features": [
-                    "Limited access to tool kits",
-                    "Limited collaboration opportunities",
-                    "Basic Profile",
-                    "Standard Support"
+                    "Akse Limite Lor Nou Bann Sett Zouti",
+                    "Posibilite Limite Pou Bann Kolaborasyon",
+                    "Profil Sinplifye",
+                    "Sipor Bazik"
                 ],
-                "buttonText": "Get Started"
+                "buttonText": "A Nou Ale"
             },
             {
-                "name": "Standard",
+                "name": "STANDARD",
                 "price": "Rs 2500",
-                "priceDescription": "per month for brands",
+                "priceDescription": "par mwa pou bann mark",
                 "priceCreators": "Rs 1500",
-                "priceCreatorsDescription": "per month for creators",
-                "description": "For growing businesses & creators",
+                "priceCreatorsDescription": "par mwa pou bann kreaterr konteni",
+                "description": "Pou bann bizness ki pe grandi ek bann inflianserr",
                 "features": [
-                    "Access to all tool kits (Rs 400 per use)",
-                    "Full collaboration opportunities",
-                    "Enhanced Profile",
-                    "Priority Support"
+                    "Akse ek Tou Nou Bann Sett Zouti (Rs 400 sak koutt servi)",
+                    "Full posibilite pou Bann Kolaborasyon ",
+                    "Profil Amelyore",
+                    "Sipor an Pryorite"
                 ],
-                "buttonText": "Choose Standard",
-                "popular": "Most Popular"
+                "buttonText": "Swazir Plan Standard",
+                "popular": "Pli Popilerr"
             },
             {
-                "name": "Pro",
+                "name": "PRO",
                 "price": "Rs 24,000",
-                "priceDescription": "per year for brands",
+                "priceDescription": "par an pou bann mark",
                 "priceCreators": "Rs 15,000",
-                "priceCreatorsDescription": "per year for creators",
-                "description": "For growing businesses & creators",
+                "priceCreatorsDescription": "par an pou bann kreaterr konteni",
+                "description": "Pou bann bizness ki pe grandi ek bann inflianserr",
                 "features": [
-                    "Unlimited AI Toolkits",
-                    "Bespoke collaboration opportunities",
-                    "Featured Profile",
-                    "Dedicated Support"
+                    "Sett Zouti ILIMITE",
+                    "Posibilite Kolaborasyon Personalize",
+                    "Profil an Vedett",
+                    "Sipor Personalize"
                 ],
-                "buttonText": "Go Pro"
+                "buttonText": "Swazir Plan PRO"
             }
         ]
     },
     "testimonials": {
-        "title": "Loved by Brands and Influencers",
-        "subtitle": "See what our users have to say about their experience with Social Colab."
+        "title": "Bann Mark ek Bann Inflianserr Mari Kontan",
+        "subtitle": "Get enn kou seki nou bann itilizater pe dir lor Social Colab."
     },
     "cta": {
         "title": "Ready to Elevate Your Brand?",
-        "subtitle": "Join Social Colab today and start building powerful partnerships that drive real results.",
-        "buttonText": "Sign Up Now"
+        "subtitle": "Zwenn ar nou, lor nou platform azordi mem ! A nou koumans enn bann partenarya pwisansolid ki amenn enn bann vre rezilta.",
+        "buttonText": "Anrezistre Twa Aster La Mem"
     }
 }

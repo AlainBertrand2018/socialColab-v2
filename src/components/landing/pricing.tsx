@@ -5,76 +5,42 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
-const pricingTiers = [
-  {
-    name: "Free",
-    price: "Free",
-    features: [
-      "Limited access to tool kits",
-      "Limited collaboration opportunities",
-      "Basic Profile",
-      "Standard Support",
-    ],
-    buttonText: "Get Started",
-    variant: "outline",
-  },
-  {
-    name: "Standard",
-    price: "Rs 2500",
-    priceCreators: "Rs 1500",
-    priceDescription: "per month for brands",
-    priceCreatorsDescription: "per month for creators",
-    features: [
-      "Access to all tool kits (Rs 400 per use)",
-      "Full collaboration opportunities",
-      "Enhanced Profile",
-      "Priority Support",
-    ],
-    buttonText: "Choose Standard",
-    variant: "default",
-    popular: true,
-  },
-  {
-    name: "Pro",
-    price: "Rs 24,000",
-    priceCreators: "Rs 15,000",
-    priceDescription: "per year for brands",
-    priceCreatorsDescription: "per year for creators",
-    features: [
-      "Unlimited AI Toolkits",
-      "Bespoke collaboration opportunities",
-      "Featured Profile",
-      "Dedicated Support",
-    ],
-    buttonText: "Go Pro",
-    variant: "outline",
-  },
-];
+export function Pricing({ content }: { content: any }) {
+  const pricingTiers = content.tiers.map((tier: any) => ({
+    name: tier.name,
+    price: tier.price,
+    priceCreators: tier.priceCreators,
+    priceDescription: tier.priceDescription,
+    priceCreatorsDescription: tier.priceCreatorsDescription,
+    features: tier.features,
+    buttonText: tier.buttonText,
+    variant: tier.name === "Standard" ? "default" : "outline",
+    popular: tier.name === "Standard",
+  }));
 
-export function Pricing() {
   return (
     <section id="pricing" className="py-24 sm:py-32 bg-secondary">
       <div className="container text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold font-headline">
-          Choose Your Plan
+          {content.title}
         </h2>
         <p className="md:w-3/4 mx-auto mt-4 text-lg text-muted-foreground font-headline font-light">
-          Simple, transparent pricing. No hidden fees. Ever.
+          {content.subtitle}
         </p>
       </div>
 
       <div className="container grid grid-cols-1 md:grid-cols-3 gap-8">
-        {pricingTiers.map((tier) => (
+        {pricingTiers.map((tier: any) => (
           <Card key={tier.name} className={cn("flex flex-col", tier.popular && "border-primary shadow-lg")}>
             {tier.popular && (
               <div className="bg-primary text-primary-foreground text-center py-1 font-semibold text-sm rounded-t-lg">
-                Most Popular
+                {tier.popularText || 'Most Popular'}
               </div>
             )}
             <CardHeader>
               <CardTitle className="font-headline text-2xl">{tier.name}</CardTitle>
               <CardDescription>
-                {tier.name === "Free" ? "Limited access" : "For growing businesses & creators"}
+                {tier.description}
               </CardDescription>
             </CardHeader>
             <CardContent className="flex-grow space-y-6">
@@ -95,7 +61,7 @@ export function Pricing() {
                 )}
               </div>
               <ul className="space-y-3 text-left">
-                {tier.features.map((feature) => (
+                {tier.features.map((feature: string) => (
                   <li key={feature} className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2" />
                     <span className="text-muted-foreground font-headline font-light">{feature}</span>

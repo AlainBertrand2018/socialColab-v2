@@ -15,13 +15,13 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
   return (
     <>
       <Hero content={dictionary.hero} />
-      <WhatWeAre />
-      <Features />
-      <Showcase />
-      <Jobs />
-      <Pricing />
-      <Testimonials />
-      <Cta />
+      <WhatWeAre content={dictionary.whatWeAre} />
+      <Features content={dictionary.features} />
+      <Showcase content={dictionary.showcase} />
+      <Jobs content={dictionary.jobs} />
+      <Pricing content={dictionary.pricing} />
+      <Testimonials content={dictionary.testimonials} />
+      <Cta content={dictionary.cta} />
     </>
   );
 }

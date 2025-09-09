@@ -7,10 +7,7 @@ import { Button } from '@/components/ui/button';
 import { DiscoverCreatorsDialog } from './discover-creators-dialog';
 import { CreatorCard } from './creator-card';
 
-const allNiches = ['All', ...Array.from(new Set(creators.map(c => c.niche.split(' & ')).flat()))];
-const visibleNiches = allNiches.slice(0, 4);
-
-export function Showcase() {
+export function Showcase({ content }: { content: any }) {
   const [selectedNiche, setSelectedNiche] = useState('All');
   
   const showcasedCreators = creators.slice(0, 6);
@@ -18,18 +15,21 @@ export function Showcase() {
   const filteredCreators = selectedNiche === 'All'
     ? showcasedCreators
     : creators.filter(c => c.niche.includes(selectedNiche)).slice(0, 6);
+    
+  const allNiches = ['All', ...Array.from(new Set(creators.map(c => c.niche.split(' & ')).flat()))];
+  const visibleNiches = content.filters && content.filters.length > 0 ? content.filters : allNiches.slice(0, 4);
 
   return (
     <section id="showcase" className="py-24 sm:py-32 overflow-hidden bg-primary text-primary-foreground">
         <div className="container text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                Meet Our Vetted Creators
+                {content.title}
             </h2>
             <div className="md:w-3/4 mx-auto mt-4 text-lg text-primary-foreground/90 font-headline font-light">
-                Discover talented individuals ready to bring your brand's story to life.
+                {content.subtitle}
             </div>
             <div className="flex justify-center gap-2 mt-8 flex-wrap">
-                {visibleNiches.map(niche => (
+                {visibleNiches.map((niche : string) => (
                     <Button 
                         key={niche} 
                         variant={selectedNiche === niche ? 'secondary' : 'outline'}
@@ -58,4 +58,3 @@ export function Showcase() {
     </section>
   );
 }
-

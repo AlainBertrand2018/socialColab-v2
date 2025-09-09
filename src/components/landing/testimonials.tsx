@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
-const testimonials = [
+const testimonialsData = [
   {
     name: 'Sarah L.',
     title: 'Marketing Director, Bloom Co.',
@@ -33,21 +33,20 @@ const testimonials = [
   },
 ];
 
-export function Testimonials() {
+export function Testimonials({ content }: { content: any }) {
   return (
     <section id="testimonials" className="container py-24 sm:py-32">
       <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold font-headline">
-          Loved by Brands and <span className="bg-gradient-to-r from-primary to-accent text-transparent bg-clip-text">Influencers</span>
+        <h2 className="text-3xl md:text-4xl font-bold font-headline" dangerouslySetInnerHTML={{ __html: content.title }}>
         </h2>
         <p className="md:w-3/4 mx-auto mt-4 text-lg text-muted-foreground font-headline font-light">
-          See what our users have to say about their experience with Social Colab.
+          {content.subtitle}
         </p>
       </div>
 
       <Carousel opts={{ align: "start", loop: true }} className="relative">
         <CarouselContent>
-          {testimonials.map(({ name, title, avatar, quote, dataAiHint }) => (
+          {testimonialsData.map(({ name, title, avatar, quote, dataAiHint }) => (
             <CarouselItem key={name} className="md:basis-1/2 lg:basis-1/3">
               <Card>
                 <CardContent className="pt-6">

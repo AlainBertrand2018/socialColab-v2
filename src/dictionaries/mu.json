@@ -2,83 +2,164 @@
 {
   "navigation": {
     "navLinks": [
-      {
-        "name": "Fonksyonalite",
-        "href": "#features"
-      },
-      {
-        "name": "Kanpagn",
-        "href": "#jobs"
-      },
-      {
-        "name": "Pri",
-        "href": "#pricing"
-      },
-      {
-        "name": "Temwanyaz",
-        "href": "#testimonials"
-      }
+      { "name": "Fonksyonalite", "href": "#features" },
+      { "name": "Kanpagn", "href": "#jobs" },
+      { "name": "Pri", "href": "#pricing" },
+      { "name": "Temwanyaz", "href": "#testimonials" }
     ],
     "auth": {
       "login": "Rantre",
-      "getStarted": "Anou Koumanse"
+      "getStarted": "Annou Koumanse"
     }
   },
   "hero": {
     "title": "Konekte. Kolabore. Kree.",
-    "subtitle": "Social Colab se enn platform akot nou pa pran okenn komisyon ! WI ! 0% commision komisyon lor bann kolaborasyon ant bann mark ek bann inflianserr lokal",
+    "subtitle": "Social Colab enn platform kot nou pa pran okenn komisyon. Wi: 0% komisyon lor bann kolaborasyon ant bann mark ek bann influanser lokal.",
     "cta": {
-      "getStarted": "Sey li Kado",
-      "learnMore": "To anvi konn plis"
+      "getStarted": "Sey Li Gratis",
+      "learnMore": "Aprann Plis"
     }
   },
+  "whatWeAre": {
+    "title": "We are a 0% commission platform",
+    "p1": "At Social Colab, we believe in fostering direct, transparent, and fruitful relationships. That's why we've built the first-ever 0% commission platform in Mauritius, dedicated to connecting local brands with a vetted community of creators. Our model is simple: you pay for the plan, not the connection. No hidden fees, no percentages of your campaign budget taken away. Just a flat, predictable subscription.",
+    "p2": "This approach empowers brands to maximize their marketing spend and allows creators to keep 100% of their earnings from collaborations. It's a win-win that encourages more authentic partnerships and a stronger creative economy for our island.",
+    "cta": "Provide Feedback"
+  },
+  "features": {
+    "title": "Nou Ena Bann Zouti Lantelizans Artifisyel Pou Tou Dimoun",
+    "subtitle": "Kit ou enn bizness pe elarzi so mark, ouswa enn influanser pe rod bon partenarya, nou platform donn zot bann zouti ki bizin pou reysi.",
+    "tabs": {
+      "brands": "Ou Ena Enn Bizness?",
+      "creators": "Ou Enn Influanserr?"
+    },
+    "benefits": {
+      "brands": [
+        {
+          "title": "Servi Lantelizans Artifisyel",
+          "description": "Arete perdi letan. Nou sistem intelizan matche ou mark avek bann influanser ki zot lodyans koresponn avek ou sib demografik."
+        },
+        {
+          "title": "Zere Ou Bann Kanpagn San Traka",
+          "description": "Depi koumansman ziska fin, zere tou ou kanpagn depi enn sel plas. Nou zouti integre fer kolaborasyon vinn fasil."
+        },
+        {
+          "title": "Analiz Anplas",
+          "description": "Swiv performans lor tablo-de-bor: ROI, nivo langazman, ek krwasans followers pou kapav ajiste ou stratezi."
+        }
+      ],
+      "creators": [
+        {
+          "title": "Dekouver Bann Mark Otantik",
+          "description": "Konekte avek bann mark ki alinye avek ou valer ek stil konteni. Trouv partenarya solid ek dirab."
+        },
+        {
+          "title": "Montre To Potansyel",
+          "description": "Kree enn profil profesyonnel (kouma enn media kit): met ou meyer travay ek done demografik lodyans pou atir bann mark."
+        },
+        {
+          "title": "Fer Bann Deal An Sekirite",
+          "description": "Zere propozisyon, kontra ek peyman dan enn sel plas. Nou sistem asire to peyman ar ler, sak fwa."
+        }
+      ]
+    },
+    "cta": "Annou Koumanse"
+  },
+  "showcase": {
+    "title": "Zwenn Nou Bann Kreater",
+    "subtitle": "Dekouver bann talan ki kapav fer ou mark rezone.",
+    "filters": ["Tou", "Sustainable Living", "Drone Videography", "Manze"],
+    "cta": "Discover More Creators"
+  },
+  "jobs": {
+    "title": "Kanpagn Aktif",
+    "subtitle": "Enn seleksyon lokazion pou kolabor avek bann gran mark Morisyen.",
+    "cta": "Dekouver Plis Travay"
+  },
+  "pricing": {
+    "title": "Swazir To Plan",
+    "subtitle": "Pricing sinp ek transparan. Okenn fre kasiet.",
+    "tiers": [
+      {
+        "name": "GRATIS",
+        "price": "Gratis",
+        "priceCreators": "Gratis",
+        "priceDescription": "Pou bann mark",
+        "priceCreatorsDescription": "Pou bann kreater konteni",
+        "description": "Aksè limite",
+        "features": [
+          "Aksè limite lor nou set zouti",
+          "Posibilite limite pou kolaborasyon",
+          "Profil sinplifye",
+          "Sipor bazik"
+        ],
+        "buttonText": "Annou Ale"
+      },
+      {
+        "name": "STANDARD",
+        "price": "Rs 2,500",
+        "priceCreators": "Rs 1,500",
+        "priceDescription": "par mwa pou bann mark",
+        "priceCreatorsDescription": "par mwa pou bann kreater",
+        "description": "Pou bann bizness ek influanser pe grandi",
+        "features": [
+          "Aksè a tou nou set zouti",
+          "Kolaborasyon san limit lor platform",
+          "Profil amelyore",
+          "Sipor priyoriter"
+        ],
+        "buttonText": "Swazir Plan Standard",
+        "popularText": "Pli Popiler"
+      },
+      {
+        "name": "PRO",
+        "price": "Rs 24,000",
+        "priceCreators": "Rs 15,000",
+        "priceDescription": "par an pou bann mark",
+        "priceCreatorsDescription": "par an pou bann kreater",
+        "description": "Pou bann ekip ki pe al scale",
+        "features": [
+          "Set zouti ILIMITE",
+          "Kolaborasyon personalize",
+          "Profil an vedett",
+          "Sipor personalize"
+        ],
+        "buttonText": "Swazir Plan PRO"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Bann Mark ek Influanser Satisfet",
+    "subtitle": "Get seki nou itilizater pe dir lor Social Colab."
+  },
+  "cta": {
+    "title": "Pare Pou Amelyor To Mark?",
+    "subtitle": "Rezwenn nou lor platform azordi mem. Annou koumans enn partenarya solid ki amenn vre rezilta.",
+    "buttonText": "Anrezistre Asterla"
+  },
   "footer": {
-    "tagline": "Nou konekte bann mark ek bann inflianserr lokal pou ki zot kapav kree bann mari kanpagn.",
+    "tagline": "Nou konekte bann mark ek bann influanser lokal pou kree bann kanpagn ki fer zefè.",
     "product": {
       "title": "Prodwi",
       "links": [
-        {
-          "name": "Fonksyonalite",
-          "href": "#features"
-        },
-        {
-          "name": "Pri",
-          "href": "#pricing"
-        },
-        {
-          "name": "Temwanyaz",
-          "href": "#testimonials"
-        }
+        { "name": "Fonksyonalite", "href": "#features" },
+        { "name": "Pri", "href": "#pricing" },
+        { "name": "Temwanyaz", "href": "#testimonials" }
       ]
     },
     "company": {
       "title": "Konpanyi",
       "links": [
-        {
-          "name": "Ki Nou Ete",
-          "href": "#what-we-are"
-        },
-        {
-          "name": "Travay",
-          "href": "#"
-        },
-        {
-          "name": "Kontak",
-          "href": "#"
-        }
+        { "name": "Ki Nou Ete", "href": "#what-we-are" },
+        { "name": "Travay", "href": "#" },
+        { "name": "Kontak", "href": "#" }
       ]
     },
     "legal": {
       "title": "Legal",
       "links": [
-        {
-          "name": "Politik Konfidansyalite",
-          "href": "#"
-        },
-        {
-          "name": "Kondisyon Servis",
-          "href": "#"
-        }
+        { "name": "Politik Konfidansyalite", "href": "#" },
+        { "name": "Kondisyon Servis", "href": "#" }
       ]
     }
   }

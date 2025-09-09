@@ -4,17 +4,17 @@ import { jobs } from '@/lib/job-data';
 import { JobCard } from './job-card';
 import { DiscoverJobsDialog } from './discover-jobs-dialog';
 
-export function Jobs() {
+export function Jobs({ content }: { content: any }) {
     const showcasedJobs = jobs.slice(0, 6);
 
     return (
         <section id="jobs" className="py-24 sm:py-32">
             <div className="container text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold font-headline">
-                    Active Campaigns
+                    {content.title}
                 </h2>
                 <div className="md:w-3/4 mx-auto mt-4 text-lg text-muted-foreground font-headline font-light">
-                    Find the perfect opportunity to collaborate with leading Mauritian brands.
+                    {content.subtitle}
                 </div>
             </div>
             <div className="container">
@@ -25,7 +25,7 @@ export function Jobs() {
                 </div>
                  <div className="text-center mt-16">
                     <DiscoverJobsDialog
-                        trigger={<Button size="lg">Discover More Jobs</Button>}
+                        trigger={<Button size="lg">{content.cta}</Button>}
                     />
                 </div>
             </div>

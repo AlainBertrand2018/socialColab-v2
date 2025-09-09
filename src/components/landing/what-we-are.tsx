@@ -12,21 +12,21 @@ import {
 } from "@/components/ui/dialog";
 import { FeedbackForm } from './feedback-form';
 
-export function WhatWeAre() {
+export function WhatWeAre({ content }: { content: any }) {
   return (
     <section id="what-we-are" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">What We Are</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-headline">{content.title}</h2>
           <p className="mt-4 text-base text-muted-foreground font-headline font-light">
-            Social Colab is your direct path to powerful, authentic collaborations. We're a zero-commission platform built to help local and regional brands connect with a vetted community of creators.
+            {content.p1}
           </p>
           <p className="mt-4 text-base text-muted-foreground font-headline font-light">
-            Unlike traditional platforms, we do not take a cut of your deals. Our mission is to empower you to build genuine partnerships, allowing your entire budget to go directly toward sparking impactful campaigns and measurable results. It's time to co-create, launch, and grow—without the middleman.
+            {content.p2}
           </p>
           <Dialog>
             <DialogTrigger asChild>
-              <Button size="lg" className="mt-8">Give Us Your Feedback</Button>
+              <Button size="lg" className="mt-8">{content.cta}</Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
