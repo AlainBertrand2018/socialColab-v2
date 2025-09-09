@@ -7,4 +7,7 @@ const dictionaries = {
   mu: () => import('@/dictionaries/mu.json').then(module => module.default),
 };
 
-export const getDictionary = async (locale: Locale) => dictionaries[locale]();
+export const getDictionary = async (locale: Locale) => {
+  const loader = dictionaries[locale] || dictionaries.en;
+  return loader();
+};
