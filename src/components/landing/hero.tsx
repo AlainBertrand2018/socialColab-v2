@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -27,7 +28,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-6 text-xl text-slate-300 md:w-10/12 mx-auto">
-          Social Colab is the 0% commision platform for Brands and Creators Colabs
+          Social Colab is the 0% commision platform for Local Brands and Creators Colabs
         </p>
 
         <div className="mt-8 space-y-4 md:space-y-0 md:space-x-4">
