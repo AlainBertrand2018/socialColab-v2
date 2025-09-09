@@ -74,13 +74,13 @@ export function Header({ navigation, auth }: { navigation: any, auth: any }) {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <div className="hidden md:flex md:items-center md:gap-4">
-            <LanguageSwitcher />
             <Button variant="ghost" asChild>
                 <Link href="/login">{auth.login}</Link>
             </Button>
             <Button asChild>
                 <Link href="/onboarding">{auth.getStarted}</Link>
             </Button>
+            <LanguageSwitcher />
           </div>
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -105,13 +105,13 @@ export function Header({ navigation, auth }: { navigation: any, auth: any }) {
                   ))}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4">
-                  <LanguageSwitcher />
                   <Button variant="ghost" asChild>
                      <Link href="/login">{auth.login}</Link>
                   </Button>
                    <Button asChild onClick={() => setOpen(false)}>
                      <Link href="/onboarding">{auth.getStarted}</Link>
                     </Button>
+                  <LanguageSwitcher />
                 </div>
               </div>
             </SheetContent>
