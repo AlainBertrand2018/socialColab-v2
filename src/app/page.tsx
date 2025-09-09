@@ -6,10 +6,12 @@ import { Jobs } from '@/components/landing/jobs';
 import { Pricing } from '@/components/landing/pricing';
 import { Testimonials } from '@/components/landing/testimonials';
 import { Cta } from '@/components/landing/cta';
+import { BetaWelcomeDialog } from '@/components/landing/beta-welcome-dialog';
 
 export default function Home() {
   return (
     <>
+      <BetaWelcomeDialog />
       <Hero />
       <WhatWeAre />
       <Features />
