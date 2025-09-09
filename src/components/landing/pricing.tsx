@@ -98,7 +98,7 @@ export function Pricing() {
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-center">
                     <Check className="h-5 w-5 text-primary mr-2" />
-                    <span className="text-muted-foreground">{feature}</span>
+                    <span className="text-muted-foreground font-headline font-light">{feature}</span>
                   </li>
                 ))}
               </ul>
