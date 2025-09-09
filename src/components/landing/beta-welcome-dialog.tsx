@@ -30,8 +30,9 @@ export function BetaWelcomeDialog() {
             </div>
           <DialogTitle className="text-center text-2xl font-headline">Welcome to Social Colab Beta!</DialogTitle>
           <DialogDescription className="text-center text-base py-4 space-y-2">
-            <p>We're excited to have you here! Please note that our platform is currently in beta testing. We are actively working to improve the service and your feedback is invaluable to us.</p>
-            <p>For testing purposes, the content you see is generated with mock data. We will be integrating real people and brands as they sign up.</p>
+            We're excited to have you here! Please note that our platform is currently in beta testing. We are actively working to improve the service and your feedback is invaluable to us.
+            <br /><br />
+            For testing purposes, the content you see is generated with mock data. We will be integrating real people and brands as they sign up.
           </DialogDescription>
         </DialogHeader>
         <div className="flex justify-center">
