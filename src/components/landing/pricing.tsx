@@ -82,16 +82,16 @@ export function Pricing() {
                 {tier.name === 'Standard' || tier.name === 'Pro' ? (
                     <>
                         <div className="mb-4">
-                            <p className="text-3xl font-bold">{tier.price}</p>
+                            <p className="text-3xl font-bold font-headline">{tier.price}</p>
                             <p className="text-sm text-muted-foreground">{tier.priceDescription}</p>
                         </div>
                         <div className="mb-4">
-                             <p className="text-3xl font-bold">{tier.priceCreators}</p>
+                             <p className="text-3xl font-bold font-headline">{tier.priceCreators}</p>
                              <p className="text-sm text-muted-foreground">{tier.priceCreatorsDescription}</p>
                         </div>
                     </>
                 ) : (
-                     <p className="text-4xl font-bold">{tier.price}</p>
+                     <p className="text-4xl font-bold font-headline">{tier.price}</p>
                 )}
               </div>
               <ul className="space-y-3 text-left">
