@@ -36,8 +36,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn('font-body antialiased', poppins.variable, ptSans.variable)}>
+    <html lang="en" suppressHydrationWarning className={cn(poppins.variable, ptSans.variable)}>
+      <body className={cn('font-body antialiased')}>
         <Providers>
             <div className="flex min-h-screen flex-col">
               <Header />
