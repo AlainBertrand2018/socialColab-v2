@@ -7,15 +7,55 @@ import { Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { i18n, type Locale } from '@/i18n.config';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 
 const navLinks = [
-  { name: 'Features', href: '/#features' },
-  { name: 'Campaigns', href: '/#jobs' },
-  { name: 'Pricing', href: '/#pricing' },
-  { name: 'Testimonials', href: '/#testimonials' },
+  { name: 'Features', href: '#features' },
+  { name: 'Campaigns', href: '#jobs' },
+  { name: 'Pricing', href: '#pricing' },
+  { name: 'Testimonials', href: '#testimonials' },
 ];
 
-export function Header() {
+function LanguageSwitcher() {
+  const pathName = usePathname();
+
+  const redirectedPathName = (locale: Locale) => {
+    if (!pathName) return '/';
+    const segments = pathName.split('/');
+    segments[1] = locale;
+    return segments.join('/');
+  };
+
+  const currentLocale = pathName.split('/')[1] as Locale;
+
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="outline" size="icon">
+          <span className="text-sm font-bold">{currentLocale.toUpperCase()}</span>
+          <span className="sr-only">Change language</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        {i18n.locales.map(locale => (
+          <DropdownMenuItem key={locale} asChild>
+            <Link href={redirectedPathName(locale)}>{locale.toUpperCase()}</Link>
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+}
+
+
+export function Header({ navigation, auth }: { navigation: any, auth: any }) {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -26,7 +66,7 @@ export function Header() {
           <span className="hidden font-bold sm:inline-block font-headline text-primary">Social Colab</span>
         </Link>
         <nav className="hidden md:flex md:items-center md:gap-6 text-sm">
-          {navLinks.map((link) => (
+          {navigation.navLinks.map((link: any) => (
             <Link key={link.name} href={link.href} className="font-medium text-foreground/60 transition-colors hover:text-foreground/80">
               {link.name}
             </Link>
@@ -34,11 +74,12 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <div className="hidden md:flex md:items-center md:gap-4">
+            <LanguageSwitcher />
             <Button variant="ghost" asChild>
-                <Link href="/login">Log In</Link>
+                <Link href="/login">{auth.login}</Link>
             </Button>
             <Button asChild>
-                <Link href="/onboarding">Get Started</Link>
+                <Link href="/onboarding">{auth.getStarted}</Link>
             </Button>
           </div>
           <Sheet open={open} onOpenChange={setOpen}>
@@ -57,18 +98,19 @@ export function Header() {
                   </Link>
                 </div>
                 <nav className="flex flex-col gap-6 text-lg font-medium">
-                  {navLinks.map((link) => (
+                  {navigation.navLinks.map((link: any) => (
                     <Link key={link.name} href={link.href} onClick={() => setOpen(false)} className="text-foreground/60 transition-colors hover:text-foreground/80">
                       {link.name}
                     </Link>
                   ))}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4">
+                  <LanguageSwitcher />
                   <Button variant="ghost" asChild>
-                     <Link href="/login">Log In</Link>
+                     <Link href="/login">{auth.login}</Link>
                   </Button>
                    <Button asChild onClick={() => setOpen(false)}>
-                     <Link href="/onboarding">Get Started</Link>
+                     <Link href="/onboarding">{auth.getStarted}</Link>
                     </Button>
                 </div>
               </div>

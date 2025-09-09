@@ -1,0 +1,49 @@
+{
+    "navigation": {
+      "navLinks": [
+        { "name": "Fonctionnalités", "href": "#features" },
+        { "name": "Campagnes", "href": "#jobs" },
+        { "name": "Tarifs", "href": "#pricing" },
+        { "name": "Témoignages", "href": "#testimonials" }
+      ],
+      "auth": {
+        "login": "Se connecter",
+        "getStarted": "Commencer"
+      }
+    },
+    "hero": {
+      "title": "Connecter. Collaborer. Créer.",
+      "subtitle": "Social Colab est la plateforme à 0% de commission pour les collaborations entre marques et créateurs locaux",
+      "cta": {
+        "getStarted": "Commencez Gratuitement",
+        "learnMore": "En savoir plus"
+      }
+    },
+    "footer": {
+        "tagline": "Mettre en relation les marques et les influenceurs locaux pour créer du contenu exceptionnel.",
+        "product": {
+          "title": "Produit",
+          "links": [
+            { "name": "Fonctionnalités", "href": "#features" },
+            { "name": "Tarifs", "href": "#pricing" },
+            { "name": "Témoignages", "href": "#testimonials" }
+          ]
+        },
+        "company": {
+          "title": "Entreprise",
+          "links": [
+            { "name": "À propos de nous", "href": "#what-we-are" },
+            { "name": "Carrières", "href": "#" },
+            { "name": "Contact", "href": "#" }
+          ]
+        },
+        "legal": {
+          "title": "Légal",
+          "links": [
+            { "name": "Politique de confidentialité", "href": "#" },
+            { "name": "Conditions d'utilisation", "href": "#" }
+          ]
+        }
+      }
+  }
+  

@@ -1,0 +1,48 @@
+{
+  "navigation": {
+    "navLinks": [
+      { "name": "Features", "href": "#features" },
+      { "name": "Campaigns", "href": "#jobs" },
+      { "name": "Pricing", "href": "#pricing" },
+      { "name": "Testimonials", "href": "#testimonials" }
+    ],
+    "auth": {
+      "login": "Log In",
+      "getStarted": "Get Started"
+    }
+  },
+  "hero": {
+    "title": "Connect. Collaborate. Create.",
+    "subtitle": "Social Colab is the 0% commision platform for Local Brands and Creators Colabs",
+    "cta": {
+      "getStarted": "Get Started For Free",
+      "learnMore": "Learn More"
+    }
+  },
+  "footer": {
+    "tagline": "Connecting local brands and influencers to create amazing content.",
+    "product": {
+      "title": "Product",
+      "links": [
+        { "name": "Features", "href": "#features" },
+        { "name": "Pricing", "href": "#pricing" },
+        { "name": "Testimonials", "href": "#testimonials" }
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        { "name": "About Us", "href": "#what-we-are" },
+        { "name": "Careers", "href": "#" },
+        { "name": "Contact", "href": "#" }
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "links": [
+        { "name": "Privacy Policy", "href": "#" },
+        { "name": "Terms of Service", "href": "#" }
+      ]
+    }
+  }
+}
