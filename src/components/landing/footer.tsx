@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Twitter, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 
 export function Footer() {
@@ -50,7 +50,6 @@ export function Footer() {
           <div className="flex gap-4">
             <Link href="https://twitter.com/AlainBertrandmu/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground"><Twitter size={18} /></Link>
             <Link href="https://www.linkedin.com/in/alainbertrand/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground"><Linkedin size={18} /></Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground"><Instagram size={18} /></Link>
           </div>
         </div>
       </div>
