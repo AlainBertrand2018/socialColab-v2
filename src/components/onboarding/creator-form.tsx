@@ -44,7 +44,8 @@ const page2Schema = z.object({
     audienceGender: z.number().min(0).max(100),
     engagementRate: z.coerce.number().min(0),
     maxViews: z.coerce.number().min(0),
-    topLocations: z.array(z.string()).optional(),
+    topLocations: z.array(z
+.string()).optional(),
   })).optional(),
 });
 
@@ -52,12 +53,12 @@ const page3Schema = z.object({
   primaryNiche: z.string({ required_error: "Please select your primary niche." }),
   mainActivity: z.string({ required_error: "Please select your main activity." }),
   pricing: z.object({
-    productPlacement: z.coerce.number().optional(),
-    promotionalVideo: z.coerce.number().optional(),
-    sponsoredBlogPost: z.coerce.number().optional(),
-    publicAppearance: z.coerce.number().optional(),
-    sponsoredHowTos: z.coerce.number().optional(),
-    ambassadorship: z.coerce.number().optional(),
+    productPlacement: z.coerce.number().optional().or(z.literal('')),
+    promotionalVideo: z.coerce.number().optional().or(z.literal('')),
+    sponsoredBlogPost: z.coerce.number().optional().or(z.literal('')),
+    publicAppearance: z.coerce.number().optional().or(z.literal('')),
+    sponsoredHowTos: z.coerce.number().optional().or(z.literal('')),
+    ambassadorship: z.coerce.number().optional().or(z.literal('')),
   }).optional(),
 });
 
@@ -97,12 +98,12 @@ export function CreatorOnboardingForm() {
       primaryMaxViews: 0,
       otherPlatforms: [],
       pricing: {
-        productPlacement: undefined,
-        promotionalVideo: undefined,
-        sponsoredBlogPost: undefined,
-        publicAppearance: undefined,
-        sponsoredHowTos: undefined,
-        ambassadorship: undefined,
+        productPlacement: '',
+        promotionalVideo: '',
+        sponsoredBlogPost: '',
+        publicAppearance: '',
+        sponsoredHowTos: '',
+        ambassadorship: '',
       },
       portfolio: [
           { title: '', description: '', files: null },
