@@ -33,7 +33,9 @@ export function Header() {
         </nav>
         <div className="flex flex-1 items-center justify-end gap-4">
           <div className="hidden md:flex md:items-center md:gap-4">
-            <Button variant="ghost">Log In</Button>
+            <Button variant="ghost" asChild>
+                <Link href="/login">Log In</Link>
+            </Button>
             <Button asChild>
                 <Link href="/onboarding">Get Started</Link>
             </Button>
@@ -61,7 +63,9 @@ export function Header() {
                   ))}
                 </nav>
                 <div className="mt-auto flex flex-col gap-4">
-                  <Button variant="ghost">Log In</Button>
+                  <Button variant="ghost" asChild>
+                     <Link href="/login">Log In</Link>
+                  </Button>
                    <Button asChild onClick={() => setOpen(false)}>
                      <Link href="/onboarding">Get Started</Link>
                     </Button>
