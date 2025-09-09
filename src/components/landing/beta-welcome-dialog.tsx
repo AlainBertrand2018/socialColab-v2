@@ -36,7 +36,7 @@ export function BetaWelcomeDialog() {
           </DialogDescription>
         </DialogHeader>
         <div className="flex justify-center">
-            <Button onClick={handleClose} size="lg">Explore the Platform</Button>
+            <Button onClick={handleClose} size="lg">Welcome</Button>
         </div>
       </DialogContent>
     </Dialog>
