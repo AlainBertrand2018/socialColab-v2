@@ -2,47 +2,47 @@
 {
     "navigation": {
       "navLinks": [
-        { "name": "Features", "href": "#features" },
-        { "name": "Campaigns", "href": "#jobs" },
-        { "name": "Pricing", "href": "#pricing" },
-        { "name": "Testimonials", "href": "#testimonials" }
+        { "name": "karakteristik", "href": "#features" },
+        { "name": "Kanpagn", "href": "#jobs" },
+        { "name": "Pri", "href": "#pricing" },
+        { "name": "Temwanyaz", "href": "#testimonials" }
       ],
       "auth": {
-        "login": "Log In",
-        "getStarted": "Get Started"
+        "login": "Rantre",
+        "getStarted": "Anou Koumanse"
       }
     },
     "hero": {
       "title": "Konekte. Kolabore. Kree.",
-      "subtitle": "Social Colab is the 0% commision platform for Local Brands and Creators Colabs",
+      "subtitle": "Social Colab se enn platform akot nou pa pran okenn komisyon - 0% komisyon lor bann kolaborasyon ant inflianserr ek bann konpanyi",
       "cta": {
-        "getStarted": "Get Started For Free",
-        "learnMore": "Learn More"
+        "getStarted": "Sey li Kado",
+        "learnMore": "To anvi konn plis"
       }
     },
     "footer": {
-      "tagline": "Connecting local brands and influencers to create amazing content.",
+      "tagline": "Nou konekte bann Mark ek bann Inflianserr lokal pour ki zot kapav kree bann mari konteni",
       "product": {
-        "title": "Product",
+        "title": "Prodwi",
         "links": [
-          { "name": "Features", "href": "#features" },
-          { "name": "Pricing", "href": "#pricing" },
-          { "name": "Testimonials", "href": "#testimonials" }
+          { "name": "karakteristik", "href": "#features" },
+          { "name": "Pri", "href": "#pricing" },
+          { "name": "Temwanyaz", "href": "#testimonials" }
         ]
       },
       "company": {
-        "title": "Company",
+        "title": "Konpanyi",
         "links": [
-          { "name": "About Us", "href": "#what-we-are" },
-          { "name": "Careers", "href": "#" },
-          { "name": "Contact", "href": "#" }
+          { "name": "Ki Nou Ete", "href": "#what-we-are" },
+          { "name": "Travay", "href": "#" },
+          { "name": "Kontak", "href": "#" }
         ]
       },
       "legal": {
         "title": "Legal",
         "links": [
-          { "name": "Privacy Policy", "href": "#" },
-          { "name": "Terms of Service", "href": "#" }
+          { "name": "Politik konfidansyalite", "href": "#" },
+          { "name": "Kondisyon Servis", "href": "#" }
         ]
       }
     }

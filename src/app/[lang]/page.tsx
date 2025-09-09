@@ -6,7 +6,6 @@ import { Jobs } from '@/components/landing/jobs';
 import { Pricing } from '@/components/landing/pricing';
 import { Testimonials } from '@/components/landing/testimonials';
 import { Cta } from '@/components/landing/cta';
-import { BetaWelcomeDialog } from '@/components/landing/beta-welcome-dialog';
 import { getDictionary } from '@/lib/dictionaries';
 import { Locale } from '@/i18n.config';
 
@@ -15,7 +14,6 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
 
   return (
     <>
-      <BetaWelcomeDialog />
       <Hero content={dictionary.hero} />
       <WhatWeAre />
       <Features />
