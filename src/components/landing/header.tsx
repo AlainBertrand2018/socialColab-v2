@@ -15,13 +15,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
-const navLinks = [
-  { name: 'Features', href: '#features' },
-  { name: 'Campaigns', href: '#jobs' },
-  { name: 'Pricing', href: '#pricing' },
-  { name: 'Testimonials', href: '#testimonials' },
-];
+const languageData: Record<Locale, { flag: string; code: string; }> = {
+    mu: { flag: 'https://flagcdn.com/16x12/mu.webp', code: 'MU' },
+    en: { flag: 'https://flagcdn.com/16x12/us.webp', code: 'EN' },
+    fr: { flag: 'https://flagcdn.com/16x12/fr.webp', code: 'FR' },
+};
 
 function LanguageSwitcher() {
   const pathName = usePathname();
@@ -34,23 +34,46 @@ function LanguageSwitcher() {
   };
 
   const currentLocale = pathName.split('/')[1] as Locale;
+  const currentLangData = languageData[currentLocale] || languageData.en;
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="outline" size="icon">
-          <span className="text-sm font-bold">{currentLocale.toUpperCase()}</span>
-          <span className="sr-only">Change language</span>
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end">
-        {i18n.locales.map(locale => (
-          <DropdownMenuItem key={locale} asChild>
-            <Link href={redirectedPathName(locale)}>{locale.toUpperCase()}</Link>
-          </DropdownMenuItem>
-        ))}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <TooltipProvider>
+      <DropdownMenu>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon">
+                <Image 
+                  src={currentLangData.flag}
+                  alt={currentLangData.code}
+                  width={16}
+                  height={12}
+                />
+                <span className="sr-only">Change language</span>
+              </Button>
+            </DropdownMenuTrigger>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{currentLangData.code}</p>
+          </TooltipContent>
+        </Tooltip>
+        <DropdownMenuContent align="end">
+          {i18n.locales.map(locale => (
+            <DropdownMenuItem key={locale} asChild>
+              <Link href={redirectedPathName(locale)} className="flex items-center gap-2">
+                <Image 
+                    src={languageData[locale].flag}
+                    alt={languageData[locale].code}
+                    width={16}
+                    height={12}
+                />
+                {locale.toUpperCase()}
+              </Link>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </TooltipProvider>
   );
 }
 
