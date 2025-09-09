@@ -1,49 +1,85 @@
 
 {
-    "navigation": {
-      "navLinks": [
-        { "name": "karakteristik", "href": "#features" },
-        { "name": "Kanpagn", "href": "#jobs" },
-        { "name": "Pri", "href": "#pricing" },
-        { "name": "Temwanyaz", "href": "#testimonials" }
-      ],
-      "auth": {
-        "login": "Rantre",
-        "getStarted": "Anou Koumanse"
-      }
-    },
-    "hero": {
-      "title": "Konekte. Kolabore. Kree.",
-      "subtitle": "Social Colab se enn platform akot nou pa pran okenn komisyon ! WI ! 0% commision komisyon lor bann kolaborasyon ant bann mark ek bann inflianserr lokal",
-      "cta": {
-        "getStarted": "Sey li Kado",
-        "learnMore": "To anvi konn plis"
-      }
-    },
-    "footer": {
-      "tagline": "No Konekte bann mark ek bann inflianserr lokal pou ki zot kapav kree bann mari kanpagn.",
-      "product": {
-        "title": "Prodwi",
-        "links": [
-          { "name": "Karakteristik", "href": "#features" },
-          { "name": "Pri", "href": "#pricing" },
-          { "name": "Temwanyaz", "href": "#testimonials" }
-        ]
+  "navigation": {
+    "navLinks": [
+      {
+        "name": "karakteristik",
+        "href": "#features"
       },
-      "company": {
-        "title": "Konpanyi",
-        "links": [
-          { "name": "Ki Nou Ete", "href": "#what-we-are" },
-          { "name": "Travay", "href": "#" },
-          { "name": "Kontak", "href": "#" }
-        ]
+      {
+        "name": "Kanpagn",
+        "href": "#jobs"
       },
-      "legal": {
-        "title": "Legal",
-        "links": [
-          { "name": "Politik Konfidansyalite", "href": "#" },
-          { "name": "Kondisyon Servis", "href": "#" }
-        ]
+      {
+        "name": "Pri",
+        "href": "#pricing"
+      },
+      {
+        "name": "Temwanyaz",
+        "href": "#testimonials"
       }
+    ],
+    "auth": {
+      "login": "Rantre",
+      "getStarted": "Anou Koumanse"
     }
+  },
+  "hero": {
+    "title": "Konekte. Kolabore. Kree.",
+    "subtitle": "Social Colab se enn platform akot nou pa pran okenn komisyon ! WI ! 0% commision komisyon lor bann kolaborasyon ant bann mark ek bann inflianserr lokal",
+    "cta": {
+      "getStarted": "Sey li Kado",
+      "learnMore": "To anvi konn plis"
+    }
+  },
+  "footer": {
+    "tagline": "Connecting local brands and influencers to create amazing content.",
+    "product": {
+      "title": "Product",
+      "links": [
+        {
+          "name": "Features",
+          "href": "#features"
+        },
+        {
+          "name": "Pricing",
+          "href": "#pricing"
+        },
+        {
+          "name": "Testimonials",
+          "href": "#testimonials"
+        }
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        {
+          "name": "About Us",
+          "href": "#what-we-are"
+        },
+        {
+          "name": "Careers",
+          "href": "#"
+        },
+        {
+          "name": "Contact",
+          "href": "#"
+        }
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "links": [
+        {
+          "name": "Privacy Policy",
+          "href": "#"
+        },
+        {
+          "name": "Terms of Service",
+          "href": "#"
+        }
+      ]
+    }
+  }
 }
