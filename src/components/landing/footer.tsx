@@ -21,7 +21,7 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-3 font-headline">Product</h4>
               <nav className="flex flex-col gap-2 text-sm">
-                <Link href="./#features" className="text-muted-foreground hover:text-foreground">Features</Link>
+                <Link href="/#features" className="text-muted-foreground hover:text-foreground">Features</Link>
                 <Link href="#" className="text-muted-foreground hover:text-foreground">Pricing</Link>
                 <Link href="/#testimonials" className="text-muted-foreground hover:text-foreground">Testimonials</Link>
               </nav>
