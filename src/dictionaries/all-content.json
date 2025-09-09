@@ -1,0 +1,171 @@
+
+{
+    "navigation": {
+      "navLinks": [
+        { "name": "Features", "href": "#features" },
+        { "name": "Campaigns", "href": "#jobs" },
+        { "name": "Pricing", "href": "#pricing" },
+        { "name": "Testimonials", "href": "#testimonials" }
+      ],
+      "auth": {
+        "login": "Log In",
+        "getStarted": "Get Started"
+      }
+    },
+    "hero": {
+      "title": "Connect. Collaborate. Create.",
+      "subtitle": "Social Colab is the 0% commision platform for Local Brands and Creators Colabs",
+      "cta": {
+        "getStarted": "Get Started For Free",
+        "learnMore": "Learn More"
+      }
+    },
+    "whatWeAre": {
+        "title": "We are a 0% commission platform",
+        "p1": "At Social Colab, we believe in fostering direct, transparent, and fruitful relationships. That's why we've built the first-ever 0% commission platform in Mauritius, dedicated to connecting local brands with a vetted community of creators. Our model is simple: you pay for the plan, not the connection. No hidden fees, no percentages of your campaign budget taken away. Just a flat, predictable subscription.",
+        "p2": "This approach empowers brands to maximize their marketing spend and allows creators to keep 100% of their earnings from collaborations. It's a win-win that encourages more authentic partnerships and a stronger creative economy for our island.",
+        "cta": "Provide Feedback"
+    },
+    "features": {
+        "title": "We Have Powerful AI-driven Toolkits for Everyone",
+        "subtitle": "Whether you're a brand scaling your reach or a creator seeking meaningful partnerships, our platform provides the tools you need to succeed.",
+        "tabs": {
+          "brands": "For Brands",
+          "creators": "For Creators"
+        },
+        "benefits": {
+          "brands": [
+            {
+              "title": "AI-Powered Discovery",
+              "description": "Stop guessing. Our intelligent system matches your brand with influencers whose audiences perfectly align with your target demographics."
+            },
+            {
+              "title": "Streamlined Campaign Management",
+              "description": "From pitch to payment, manage your entire campaign from a single dashboard. Our integrated tools make collaboration effortless."
+            },
+            {
+              "title": "In-Depth Analytics",
+              "description": "Track your campaign's performance with a comprehensive dashboard. Measure ROI, engagement, and follower growth to optimize your strategy."
+            }
+          ],
+          "creators": [
+            {
+              "title": "Find Authentic Brands",
+              "description": "Connect with brands that align with your values and content style. We help you find partnerships that feel genuine and rewarding."
+            },
+            {
+              "title": "Showcase Your Portfolio",
+              "description": "Build a professional profile that acts as your digital media kit. Highlight your best work and audience demographics to attract top brands."
+            },
+            {
+              "title": "Secure and Simple Deals",
+              "description": "Manage proposals, contracts, and payments all in one place. Our secure system ensures you get paid on time, every time."
+            }
+          ]
+        },
+        "cta": "Get Started"
+    },
+    "showcase": {
+        "title": "Meet Our Vetted Creators",
+        "subtitle": "Discover the talent that can bring your brand's story to life.",
+        "filters": [
+          "All",
+          "Sustainable Living",
+          "Drone Videography",
+          "Food"
+        ],
+        "cta": "Discover More Creators"
+    },
+    "jobs": {
+        "title": "Latest Campaigns",
+        "subtitle": "Check out some of the exciting opportunities to collaborate with leading Mauritian brands.",
+        "cta": "Discover All Jobs"
+    },
+    "pricing": {
+        "title": "Simple, Transparent Pricing",
+        "subtitle": "Choose a plan that works for you. No hidden fees, ever.",
+        "tiers": [
+          {
+            "name": "Free",
+            "price": "Free",
+            "priceDescription": "For Brands",
+            "priceCreators": "Free",
+            "priceCreatorsDescription": "For Creators",
+            "description": "Limited Access",
+            "features": [
+              "Limited access to our 7 AI toolkits",
+              "Limited collaboration opportunities",
+              "Simplified profile",
+              "Basic support"
+            ],
+            "buttonText": "Get Started"
+          },
+          {
+            "name": "Standard",
+            "price": "Rs 2,500",
+            "priceDescription": "per month for Brands",
+            "priceCreators": "Rs 1,500",
+            "priceCreatorsDescription": "per month for Creators",
+            "description": "For growing businesses and creators",
+            "features": [
+              "Full access to our 7 AI toolkits (at Rs 400 per run)",
+              "Unlimited collaboration opportunities",
+              "Enhanced profile features",
+              "Priority support"
+            ],
+            "buttonText": "Choose Standard",
+            "popularText": "Most Popular"
+          },
+          {
+            "name": "Pro",
+            "price": "Rs 24,000",
+            "priceDescription": "per year for Brands",
+            "priceCreators": "Rs 15,000",
+            "priceCreatorsDescription": "per year for Creators",
+            "description": "For scaling teams and professionals",
+            "features": [
+              "UNLIMITED runs of our 7 AI toolkits",
+              "Bespoke collaboration opportunities",
+              "Featured profile listing",
+              "Dedicated account manager"
+            ],
+            "buttonText": "Choose Pro"
+          }
+        ]
+    },
+    "testimonials": {
+        "title": "What Brands & Creators <br /> Are Saying",
+        "subtitle": "Real stories from real users who are transforming the way they collaborate."
+    },
+    "cta": {
+        "title": "Ready to Elevate Your Brand?",
+        "subtitle": "Join the platform where powerful partnerships happen. Let's create something amazing together.",
+        "buttonText": "Sign Up Now"
+    },
+    "footer": {
+        "tagline": "Connecting local brands and influencers to create amazing content.",
+        "product": {
+          "title": "Product",
+          "links": [
+            { "name": "Features", "href": "#features" },
+            { "name": "Pricing", "href": "#pricing" },
+            { "name": "Testimonials", "href": "#testimonials" }
+          ]
+        },
+        "company": {
+          "title": "Company",
+          "links": [
+            { "name": "About Us", "href": "#what-we-are" },
+            { "name": "Careers", "href": "#" },
+            { "name": "Contact", "href": "#" }
+          ]
+        },
+        "legal": {
+          "title": "Legal",
+          "links": [
+            { "name": "Privacy Policy", "href": "#" },
+            { "name": "Terms of Service", "href": "#" }
+          ]
+        }
+      }
+}
