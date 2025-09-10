@@ -1,3 +1,4 @@
+
 import { creators } from '@/lib/creator-data';
 import { notFound } from 'next/navigation';
 import { ProfileHeader } from '@/components/creators/profile-header';
@@ -5,7 +6,7 @@ import { ProfileSidebar } from '@/components/creators/profile-sidebar';
 import { ProfilePortfolio } from '@/components/creators/profile-portfolio';
 import { MainContent } from '@/components/creators/main-content';
 
-export default function CreatorProfilePage({ params }: { params: { id: string, lang: string } }) {
+export default function CreatorProfilePage({ params }: { params: { id: string; lang: string } }) {
   const creator = creators.find((c) => c.id.toString() === params.id);
 
   if (!creator) {
