@@ -37,10 +37,13 @@ export function Footer({ content, lang }: { content: any, lang: Locale }) {
     
     const href = link.href.startsWith('#') || link.href === '/'
       ? `/${lang}${link.href}`
-      : `/${lang}${link.href}`;
+      : link.href.startsWith('/') 
+        ? `/${lang}${link.href}`
+        : link.href;
+
 
     return (
-      <Link key={link.name} href={href} className="text-muted-foreground hover:text-foreground">
+      <Link key={index} href={href} className="text-muted-foreground hover:text-foreground">
         {link.name}
       </Link>
     );
