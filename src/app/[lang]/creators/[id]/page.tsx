@@ -6,8 +6,9 @@ import { ProfileSidebar } from '@/components/creators/profile-sidebar';
 import { ProfilePortfolio } from '@/components/creators/profile-portfolio';
 import { MainContent } from '@/components/creators/main-content';
 
-export default function CreatorProfilePage({ params }: { params: { id: string; lang: string } }) {
-  const creator = creators.find((c) => c.id.toString() === params.id);
+export default async function CreatorProfilePage({ params }: { params: Promise<{ id: string; lang: string }> }) {
+  const { id } = await params;
+  const creator = creators.find((c) => c.id.toString() === id);
 
   if (!creator) {
     notFound();

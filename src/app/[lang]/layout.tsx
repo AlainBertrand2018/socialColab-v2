@@ -10,16 +10,17 @@ export default async function LangLayout({
   params,
 }: {
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }) {
-  const dictionary = await getDictionary(params.lang);
+  const { lang } = await params;
+  const dictionary = await getDictionary(lang);
 
   return (
     <>
-      <BetaWelcomeDialog lang={params.lang} content={dictionary.betaWelcome} />
-      <Header lang={params.lang} navigation={dictionary.navigation} auth={dictionary.navigation.auth} />
+      <BetaWelcomeDialog lang={lang} content={dictionary.betaWelcome} />
+      <Header lang={lang} navigation={dictionary.navigation} auth={dictionary.navigation.auth} />
       {children}
-      <Footer lang={params.lang} content={dictionary.footer} />
+      <Footer lang={lang} content={dictionary.footer} />
     </>
   );
 }

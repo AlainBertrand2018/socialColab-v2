@@ -6,7 +6,8 @@ import { Label } from "@/components/ui/label";
 import { Locale } from "@/i18n.config";
 import Link from "next/link";
 
-export default function LoginPage({ params: { lang } }: { params: { lang: Locale } }) {
+export default async function LoginPage({ params }: { params: Promise<{ lang: Locale }> }) {
+    const { lang } = await params;
     return (
         <div className="flex items-center justify-center min-h-[calc(100vh-200px)] bg-background">
             <Card className="w-full max-w-sm">

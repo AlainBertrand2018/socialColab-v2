@@ -29,15 +29,16 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { lang: Locale };
+  params: Promise<{ lang: Locale }>;
 }>) {
+  const { lang } = await params;
   return (
-    <html lang={params.lang} suppressHydrationWarning className={cn(poppins.variable, ptSans.variable)}>
+    <html lang={lang} suppressHydrationWarning className={cn(poppins.variable, ptSans.variable)}>
       <body className={cn('font-body antialiased')}>
         <Providers>
             <div className="flex min-h-screen flex-col">
