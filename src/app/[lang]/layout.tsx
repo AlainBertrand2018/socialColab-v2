@@ -17,7 +17,7 @@ export default async function LangLayout({
   return (
     <>
       <BetaWelcomeDialog lang={params.lang} content={dictionary.betaWelcome} />
-      <Header navigation={dictionary.navigation} auth={dictionary.navigation.auth} />
+      <Header lang={params.lang} navigation={dictionary.navigation} auth={dictionary.navigation.auth} />
       {children}
       <Footer content={dictionary.footer} />
     </>

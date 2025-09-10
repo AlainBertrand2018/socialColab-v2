@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Link from 'next/link';
+import { Locale } from '@/i18n.config';
 
 const BenefitCard = ({ image, dataAiHint, title, description, alt }: { image: string; dataAiHint: string; title: string; description: string; alt: string }) => (
   <Card className="bg-card/60 backdrop-blur-sm transition-transform hover:-translate-y-2 overflow-hidden">
@@ -25,7 +26,7 @@ const BenefitCard = ({ image, dataAiHint, title, description, alt }: { image: st
 );
 
 
-export function Features({ content }: { content: any }) {
+export function Features({ content, lang }: { content: any, lang: Locale }) {
 
     const brandBenefits = [
         {
@@ -109,7 +110,7 @@ export function Features({ content }: { content: any }) {
         </Tabs>
         <div className="text-center mt-16">
           <Button size="lg" asChild>
-            <Link href="/onboarding">{content.cta}</Link>
+            <Link href={`/${lang}/onboarding`}>{content.cta}</Link>
           </Button>
         </div>
       </div>

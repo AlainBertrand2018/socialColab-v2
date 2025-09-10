@@ -1,3 +1,4 @@
+
 import { Hero } from '@/components/landing/hero';
 import { WhatWeAre } from '@/components/landing/what-we-are';
 import { Features } from '@/components/landing/features';
@@ -14,14 +15,14 @@ export default async function Home({ params: { lang } }: { params: { lang: Local
 
   return (
     <>
-      <Hero content={dictionary.hero} />
+      <Hero content={dictionary.hero} lang={lang} />
       <WhatWeAre content={dictionary.whatWeAre} />
-      <Features content={dictionary.features} />
+      <Features content={dictionary.features} lang={lang} />
       <Showcase content={dictionary.showcase} />
       <Jobs content={dictionary.jobs} />
-      <Pricing content={dictionary.pricing} />
+      <Pricing content={dictionary.pricing} lang={lang} />
       <Testimonials content={dictionary.testimonials} />
-      <Cta content={dictionary.cta} />
+      <Cta content={dictionary.cta} lang={lang} />
     </>
   );
 }

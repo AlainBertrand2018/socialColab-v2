@@ -2,8 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Locale } from '@/i18n.config';
 
-export function Hero({ content }: { content: any }) {
+export function Hero({ content, lang }: { content: any, lang: Locale }) {
   return (
     <section className="relative w-full h-screen">
       {/* Background Layer */}
@@ -33,7 +34,7 @@ export function Hero({ content }: { content: any }) {
 
         <div className="mt-8 space-y-4 md:space-y-0 md:space-x-4">
           <Button className="w-full md:w-auto" size="lg" asChild>
-            <Link href="/onboarding" target="_blank" rel="noopener noreferrer">{content.cta.getStarted}</Link>
+            <Link href={`/${lang}/onboarding`} rel="noopener noreferrer">{content.cta.getStarted}</Link>
           </Button>
           <Button variant="outline" className="w-full md:w-auto bg-transparent border-white hover:bg-accent hover:text-accent-foreground hover:border-accent" size="lg" asChild>
             <Link href="#what-we-are">

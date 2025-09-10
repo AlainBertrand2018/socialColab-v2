@@ -3,9 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Locale } from "@/i18n.config";
 import Link from "next/link";
 
-export default function LoginPage() {
+export default function LoginPage({ params: { lang } }: { params: { lang: Locale } }) {
     return (
         <div className="flex items-center justify-center min-h-[calc(100vh-200px)] bg-background">
             <Card className="w-full max-w-sm">
@@ -27,7 +28,7 @@ export default function LoginPage() {
                     <Button className="w-full">Sign in</Button>
                     <div className="mt-4 text-center text-sm">
                         Don't have an account?{" "}
-                        <Link href="/onboarding" className="underline">
+                        <Link href={`/${lang}/onboarding`} className="underline">
                             Sign up
                         </Link>
                     </div>

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 import { Button } from "@/components/ui/button";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
@@ -16,6 +16,7 @@ import { CreatorFormPage1 } from "./creator/page-one";
 import { CreatorFormPage2 } from "./creator/page-two";
 import { CreatorFormPage3 } from "./creator/page-three";
 import { CreatorFormPage4 } from "./creator/page-four";
+import { Locale } from "@/i18n.config";
 
 const page1Schema = z.object({
   profilePicture: z.any().optional(),
@@ -81,6 +82,8 @@ const pageSchemas = [page1Schema, page2Schema, page3Schema, page4Schema];
 
 export function CreatorOnboardingForm() {
   const router = useRouter();
+  const pathname = usePathname();
+  const lang = pathname.split('/')[1] as Locale;
   const { toast } = useToast();
   const [currentPage, setCurrentPage] = useState(1);
   const form = useForm<CreatorFormValues>({
@@ -147,7 +150,7 @@ export function CreatorOnboardingForm() {
       title: "Welcome aboard!",
       description: "Your creator profile has been created.",
     });
-    router.push(`/for-creators`);
+    router.push(`/${lang}/for-creators`);
   }
 
   const progress = (currentPage / TOTAL_PAGES) * 100;

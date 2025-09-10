@@ -9,7 +9,8 @@ import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { Locale } from "@/i18n.config";
 
 const brandFormSchema = z.object({
   brandName: z.string().min(2, "Brand name must be at least 2 characters."),
@@ -22,6 +23,8 @@ type BrandFormValues = z.infer<typeof brandFormSchema>;
 
 export function BrandOnboardingForm() {
     const router = useRouter();
+    const pathname = usePathname();
+    const lang = pathname.split('/')[1] as Locale;
     const { toast } = useToast();
     const form = useForm<BrandFormValues>({
         resolver: zodResolver(brandFormSchema),
@@ -39,7 +42,7 @@ export function BrandOnboardingForm() {
         title: "Welcome!",
         description: "Your brand profile has been created.",
         });
-        router.push('/for-brands');
+        router.push(`/${lang}/for-brands`);
     }
 
   return (

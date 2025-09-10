@@ -78,13 +78,13 @@ function LanguageSwitcher() {
 }
 
 
-export function Header({ navigation, auth }: { navigation: any, auth: any }) {
+export function Header({ navigation, auth, lang }: { navigation: any, auth: any, lang: Locale }) {
   const [open, setOpen] = React.useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2">
           <Image src="/images/socialColab_blu_1024.webp" alt="Social Colab Logo" width={24} height={24} className="h-6 w-6" />
           <span className="hidden font-bold sm:inline-block font-headline text-primary">Social Colab</span>
         </Link>
@@ -98,10 +98,10 @@ export function Header({ navigation, auth }: { navigation: any, auth: any }) {
         <div className="flex flex-1 items-center justify-end gap-4">
           <div className="hidden md:flex md:items-center md:gap-4">
             <Button variant="ghost" asChild>
-                <Link href="/login">{auth.login}</Link>
+                <Link href={`/${lang}/login`}>{auth.login}</Link>
             </Button>
             <Button asChild>
-                <Link href="/onboarding">{auth.getStarted}</Link>
+                <Link href={`/${lang}/onboarding`}>{auth.getStarted}</Link>
             </Button>
             <LanguageSwitcher />
           </div>
@@ -115,7 +115,7 @@ export function Header({ navigation, auth }: { navigation: any, auth: any }) {
             <SheetContent side="left">
               <div className="flex flex-col h-full">
                 <div className="mb-8">
-                  <Link href="/" className="mr-6 flex items-center space-x-2" onClick={() => setOpen(false)}>
+                  <Link href={`/${lang}`} className="mr-6 flex items-center space-x-2" onClick={() => setOpen(false)}>
                     <Image src="/images/socialColab_blu_1024.webp" alt="Social Colab Logo" width={24} height={24} className="h-6 w-6" />
                     <span className="font-bold font-headline text-primary">Social Colab</span>
                   </Link>
@@ -129,10 +129,10 @@ export function Header({ navigation, auth }: { navigation: any, auth: any }) {
                 </nav>
                 <div className="mt-auto flex flex-col gap-4">
                   <Button variant="ghost" asChild>
-                     <Link href="/login">{auth.login}</Link>
+                     <Link href={`/${lang}/login`}>{auth.login}</Link>
                   </Button>
                    <Button asChild onClick={() => setOpen(false)}>
-                     <Link href="/onboarding">{auth.getStarted}</Link>
+                     <Link href={`/${lang}/onboarding`}>{auth.getStarted}</Link>
                     </Button>
                   <LanguageSwitcher />
                 </div>

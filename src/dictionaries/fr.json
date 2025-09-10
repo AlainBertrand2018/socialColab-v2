@@ -14,133 +14,133 @@
     },
     "hero": {
       "title": "Connecter. Collaborer. Créer.",
-      "subtitle": "Social Colab est la plateforme à 0% de commission pour les collaborations entre marques et créateurs locaux",
+      "subtitle": "Social Colab est la plateforme 0% Commission pour les collaborations entre marques et créateurs locaux",
       "cta": {
         "getStarted": "Commencez Gratuitement",
         "learnMore": "En savoir plus"
       }
     },
     "whatWeAre": {
-        "title": "What We Are",
-        "p1": "At Social Colab, we believe in fostering direct, transparent, and fruitful relationships. That's why we've built the first-ever 0% commission platform in Mauritius, dedicated to connecting local brands with a vetted community of creators. Our model is simple: you pay for the plan, not the connection. No hidden fees, no percentages of your campaign budget taken away. Just a flat, predictable subscription.",
-        "p2": "This approach empowers brands to maximize their marketing spend and allows creators to keep 100% of their earnings from collaborations. It's a win-win that encourages more authentic partnerships and a stronger creative economy for our island.",
-        "cta": "Provide Feedback"
+        "title": "Que Sommes Nous ?",
+        "p1": "Sur Social Colab, nous croyons en l'importance de favoriser des relations directes, transparentes et fructueuses. C'est pourquoi nous avons créé la toute première plateforme sans commission à Maurice, dédiée à mettre en relation les marques locales avec une communauté de créateurs sélectionnés. Notre modèle est simple : vous ne payez que le forfait, pas la mise en relation. Pas de surcoût caché, pas de pourcentage prélevé sur le budget de votre campagne. Juste un abonnement forfaitaire et prévisible.",
+        "p2": "Cette approche permet aux marques d'optimiser leurs dépenses marketing et aux créateurs de conserver 100 % de leurs revenus issus des collaborations. Il s'agit d'une situation gagnant-gagnant qui favorise des partenariats plus authentiques tout en renforçant l'économie créative de notre île.",
+        "cta": "Donnez Votre Avis"
     },
     "features": {
-        "title": "We Have Powerful AI-driven Toolkits for Everyone",
-        "subtitle": "Whether you're a brand scaling your reach or a creator seeking meaningful partnerships, our platform provides the tools you need to succeed.",
+        "title": "Des Outils Puissants Pilotés par IA Pour Tous.",
+        "subtitle": "Que vous soyez une marque souhaitant étendre votre portée ou un créateur à la recherche de partenariats sérieux, notre plateforme vous apporte les outils nécessaires pour une réussite assurée.",
         "tabs": {
-          "brands": "For Brands",
-          "creators": "For Creators"
+          "brands": "Pour Les Marques",
+          "creators": "Pour Les Influenceurs"
         },
         "benefits": {
           "brands": [
             {
-              "title": "AI-Powered Discovery",
-              "description": "Stop guessing. Our intelligent system matches your brand with influencers whose audiences perfectly align with your target demographics."
+              "title": "Recherche Assistée Par IA",
+              "description": "Arrêtez les suppositions ! Notre système intelligent associe votre marque à des influenceurs dont l'audience correspond parfaitement à votre cible démographique."
             },
             {
-              "title": "Streamlined Campaign Management",
-              "description": "From pitch to payment, manage your entire campaign from a single dashboard. Our integrated tools make collaboration effortless."
+              "title": "La Gestion De Vos Campagnes... Simplifiée !",
+              "description": "De la présentation au règlement financier, gérez l'intégralité de votre campagne à partir d'un seul tableau de bord. Nos outils intégrés facilitent la collaboration."
             },
             {
-              "title": "In-Depth Analytics",
+              "title": "Analyses Détaillées",
               "description": "Track your campaign's performance with a comprehensive dashboard. Measure ROI, engagement, and follower growth to optimize your strategy."
             }
           ],
           "creators": [
             {
-              "title": "Find Authentic Brands",
-              "description": "Connect with brands that align with your values and content style. We help you find partnerships that feel genuine and rewarding."
+              "title": "Découvrez Des Marques De Valeur",
+              "description": "Nous vous aidons à trouver des partenariats authentiques et enrichissants, alignés sur vos valeur et votre style de contenus."
             },
             {
-              "title": "Showcase Your Portfolio",
-              "description": "Build a professional profile that acts as your digital media kit. Highlight your best work and audience demographics to attract top brands."
+              "title": "Mettez En Vedette Votre Portfolio",
+              "description": "Créez un profil professionnel qui servira de kit média numérique. Mettez en avant vos meilleurs travaux et les données démographiques de votre audience afin d'attirer les plus grandes marques."
             },
             {
-              "title": "Secure and Simple Deals",
-              "description": "Manage proposals, contracts, and payments all in one place. Our secure system ensures you get paid on time, every time."
+              "title": "Opérations Simples et Sûres",
+              "description": "Gérez vos propositions, contrats et règlements à partir d'un même portail. Notre système sécurisé vous garantit d'être rémunéré dans les délais impartis, à chaque fois."
             }
           ]
         },
-        "cta": "Get Started"
+        "cta": "Démarrer"
     },
     "showcase": {
-        "title": "Meet Our Vetted Creators",
-        "subtitle": "Discover the talent that can bring your brand's story to life.",
+        "title": "Découvrez Des Influenceurs Triés Sur Le Volet",
+        "subtitle": "Identifiez les talents qui peuvent donner vie à l'histoire de votre marque.",
         "filters": [
-          "All",
-          "Sustainable Living",
-          "Drone Videography",
-          "Food"
+          "Tous",
+          "Vie Durable",
+          "Vidéo par Drone",
+          "Alimentaire & Gastronomie"
         ],
-        "cta": "Discover More Creators"
+        "cta": "Retrouvez Tous Les Créateurs De Contenu"
     },
     "jobs": {
-        "title": "Latest Campaigns",
-        "subtitle": "Check out some of the exciting opportunities to collaborate with leading Mauritian brands.",
-        "cta": "Discover All Jobs"
+        "title": "Campagnes Récentes",
+        "subtitle": "Voici quelques-unes des opportunités passionnantes qui s'offrent à vous pour collaborer avec les plus grandes marques mauriciennes.",
+        "cta": "Retrouvez Tous Les Jobs"
     },
     "pricing": {
-        "title": "Simple, Transparent Pricing",
-        "subtitle": "Choose a plan that works for you. No hidden fees, ever.",
+        "title": "Tarification Simple et Transparente",
+        "subtitle": "Choisissez le plan qui vous convient. Aucuns coûts dissimulés, absolument rien !",
         "tiers": [
           {
-            "name": "Free",
-            "price": "Free",
-            "priceCreators": "Free",
-            "priceDescription": "For Brands",
-            "priceCreatorsDescription": "For Creators",
-            "description": "Limited Access",
+            "name": "GRATUIT",
+            "price": "Rs 0",
+            "priceCreators": "Gratuit",
+            "priceDescription": "Pour Les Marques",
+            "priceCreatorsDescription": "Pour Les Influenceurs",
+            "description": "Accès Limité",
             "features": [
-              "Limited access to our 7 AI toolkits",
-              "Limited collaboration opportunities",
-              "Simplified profile",
-              "Basic support"
+              "Accès limité à nos 7 modules d'outils IA",
+              "Possibilités de collaboration limitées",
+              "Profil limité",
+              "Assistance basique"
             ],
-            "buttonText": "Get Started"
+            "buttonText": "Commencer"
           },
           {
-            "name": "Standard",
+            "name": "STANDARD",
             "price": "Rs 2,500",
             "priceCreators": "Rs 1,500",
-            "priceDescription": "per month for Brands",
-            "priceCreatorsDescription": "per month for Creators",
-            "description": "For growing businesses and creators",
+            "priceDescription": "mensuellement pour les Entreprises",
+            "priceCreatorsDescription": "mensuellement pour les Influenceurs",
+            "description": "Pour les entreprises et les créateurs en pleine croissance",
             "features": [
-              "Full access to our 7 AI toolkits (at Rs 400 per run)",
-              "Unlimited collaboration opportunities",
-              "Enhanced profile features",
-              "Priority support"
+              "Accès complet à nos 7 kits d'outils IA (Rs 400 par utilisation)",
+              "Possibilités de collaboration illimitées",
+              "Fonctionnalités de profil améliorées",
+              "Assistance prioritaire"
             ],
-            "buttonText": "Choose Standard",
-            "popularText": "Most Popular"
+            "buttonText": "Choisir le Plan Standard",
+            "popularText": "Très Populaire"
           },
           {
-            "name": "Pro",
+            "name": "PRO",
             "price": "Rs 24,000",
             "priceCreators": "Rs 15,000",
-            "priceDescription": "per year for Brands",
-            "priceCreatorsDescription": "per year for Creators",
-            "description": "For scaling teams and professionals",
+            "priceDescription": "annuellement pour les Entreprises",
+            "priceCreatorsDescription": "annuellement pour les Influenceurs",
+            "description": "Pour les teams et les pros en recherche de croissance",
             "features": [
-              "UNLIMITED runs of our 7 AI toolkits",
-              "Bespoke collaboration opportunities",
-              "Featured profile listing",
-              "Dedicated account manager"
+              "Utilisation illimitée de nos 7 kits d'outils IA",
+              "Opportunités de collaboration sur mesure",
+              "Liste de profils en vedette",
+              "Gestionnaire de compte dédié"
             ],
-            "buttonText": "Choose Pro"
+            "buttonText": "Choisir le Plan PRO"
           }
         ]
     },
     "testimonials": {
-        "title": "What Brands & Creators <br /> Are Saying",
-        "subtitle": "Real stories from real users who are transforming the way they collaborate."
+        "title": "Ce Que Disent Nos Utilisateurs",
+        "subtitle": "Témoignages authentiques d'utilisateurs réels qui transforment leur façon de collaborer."
     },
     "cta": {
-        "title": "Ready to Elevate Your Brand?",
-        "subtitle": "Join the platform where powerful partnerships happen. Let's create something amazing together.",
-        "buttonText": "Sign Up Now"
+        "title": "Prêt à valoriser vos marques ?",
+        "subtitle": "Rejoignez -nous sur la plateforme où se créent des partenariats solides. Créons ensemble quelque chose d'exceptionnel.",
+        "buttonText": "Inscrivez-vous dès maintenant"
     },
     "footer": {
         "tagline": "Nous mettons les marques et les influenceurs locaux en relation pour créer du contenu exceptionnel.",

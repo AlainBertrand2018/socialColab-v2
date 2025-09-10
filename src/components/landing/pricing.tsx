@@ -4,8 +4,9 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { Locale } from "@/i18n.config";
 
-export function Pricing({ content }: { content: any }) {
+export function Pricing({ content, lang }: { content: any, lang: Locale }) {
   const pricingTiers = content.tiers.map((tier: any) => ({
     name: tier.name,
     price: tier.price,
@@ -71,7 +72,7 @@ export function Pricing({ content }: { content: any }) {
             </CardContent>
             <CardFooter>
               <Button asChild className="w-full" variant={tier.variant as any}>
-                <Link href="/onboarding">{tier.buttonText}</Link>
+                <Link href={`/${lang}/onboarding`}>{tier.buttonText}</Link>
               </Button>
             </CardFooter>
           </Card>

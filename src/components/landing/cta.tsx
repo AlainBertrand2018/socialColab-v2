@@ -1,7 +1,9 @@
+
 import { Button } from '@/components/ui/button';
+import { Locale } from '@/i18n.config';
 import Link from 'next/link';
 
-export function Cta({ content }: { content: any }) {
+export function Cta({ content, lang }: { content: any, lang: Locale }) {
   return (
     <section id="cta" className="relative py-24 sm:py-32 bg-secondary overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-t from-background to-secondary"></div>
@@ -14,7 +16,7 @@ export function Cta({ content }: { content: any }) {
           {content.subtitle}
         </p>
         <Button size="lg" className="mt-8" asChild>
-            <Link href="/onboarding">{content.buttonText}</Link>
+            <Link href={`/${lang}/onboarding`}>{content.buttonText}</Link>
         </Button>
       </div>
     </section>
