@@ -34,7 +34,7 @@
   },
   "whatWeAre": {
     "title": "Ki Nou Ete",
-    "p1": "Isi lor nou platform Social Colab, nou kwar dan promosyon bann relasyon direk, transparan, ek prodiktif. Se pou sa ki nou finn konstrir premye platform 0% komisyon dan Moris, ki konekte bann mark lokal avek enn kominote kreaterr verifye. Nou model li sinp: ou pey pou plan-la, pa koneksion-la. Pena okenn fre kasiet, pena okenn poursantaz bidze ou kanpagn ki no mett dan poss. Zis enn labonnman sinp e previzib.",
+    "p1": "Isi lor nou platform Social Colab, nou krwar dan promosyon bann relasyon direk, transparan, ek prodiktif. Se pou sa ki nou finn konstrir premye platform 0% komisyon dan Moris, ki konekte bann mark lokal avek enn kominote kreaterr verifye. Nou model li sinp: ou pey pou plan-la, pa koneksion-la. Pena okenn fre kasiet, pena okenn poursantaz bidze ou kanpagn ki no mett dan poss. Zis enn labonnman sinp e previzib.",
     "p2": "Sa lapros-la permet bann mark maximiz zot depans marketing e permett bann kreaterr gard 100% zot reveni. Nou panse ki se enn 'win-win' ki pou ankouraz bann partenarya pli otantik dan enn lekonomi kreatif pli solid pou nou ti-zil.",
     "cta": "Donn To Feedback"
   },
@@ -49,14 +49,14 @@
       "brands": [
         {
           "title": "Servi Lantelizans Artifisyel",
-          "description": "Arete perdi letan. Nou sistem intelizan konekte ou mark avek bann inflanserr ki zot lodyans koresponn avek ou sib demografik."
+          "description": "Arete perdi letan reflesi ! Nou sistem intelizan konekte ou mark avek bann inflanserr ki zot lodyans koresponn avek ou sib demografik."
         },
         {
-          "title": "Zere Ou Bann Kanpagn San Traka",
-          "description": "Depi koumansman ziska fin, zere tou ou kanpagn depi enn sel plas. Nou zouti integre fer kolaborasyon vinn fasil."
+          "title": "Zerr Ou Bann Kanpagn San Traka",
+          "description": "Depi koumansman ziska finisyon, zerr tou ou kanpagn depi enn sel plas. Nou bann zouti integre fer kolaborasyon avek bann kreaterr vinn mari fasil."
         },
         {
-          "title": "Analiz Anplas",
+          "title": "Analiz An-plas An-plas ",
           "description": "Swiv performans lor tablo-de-bor: ROI, nivo langazman, ek krwasans followers pou kapav ajiste ou stratezi."
         }
       ],
@@ -86,11 +86,11 @@
       "Drone Videography",
       "Manze"
     ],
-    "cta": "Discover More Creators"
+    "cta": "Dekouverr Ankor Bann Kreaterr Konteni"
   },
   "jobs": {
     "title": "Kanpagn Aktif",
-    "subtitle": "Enn seleksyon lokazion pou kolabor avek bann gran mark Morisyin.",
+    "subtitle": "Enn seleksyon lokazyon pou kolabor avek bann gran mark Morisyin.",
     "cta": "Dekouver Plis Travay"
   },
   "pricing": {
@@ -117,7 +117,7 @@
         "price": "Rs 2,500",
         "priceCreators": "Rs 1,500",
         "priceDescription": "par mwa pou bann mark",
-        "priceCreatorsDescription": "par mwa pou bann kreaterr",
+        "priceCreatorsDescription": "par mwa pou bann kreaterr konteni",
         "description": "Pou bann bizness ki pe grandi ek bann inflianserr",
         "features": [
           "Akse a tou nou bann set zouti",
@@ -134,7 +134,7 @@
         "priceCreators": "Rs 15,000",
         "priceDescription": "par an pou bann mark",
         "priceCreatorsDescription": "par an pou bann kreaterr",
-        "description": "Pou bann bizness ki pe grandi ek bann inflianserr",
+        "description": "Pou bann bizness ek bann inflianserr ki pe grandi ",
         "features": [
           "Set zouti ILIMITE",
           "Kolaborasyon personalize",
@@ -146,12 +146,12 @@
     ]
   },
   "testimonials": {
-    "title": "Bann Mark ek Inflianserr Satisfet",
-    "subtitle": "A la seki nou bann itilizaterr pe dir lor Social Colab."
+    "title": "Enn ta Lantrepriz ek Inflianserr 100% Satisfe",
+    "subtitle": "A la seki bann itilizaterr pe dir lor Social Colab."
   },
   "cta": {
-    "title": "Pare Pou Grandi To Mark?",
-    "subtitle": "Rezwenn nou lor nou platform azordi mem. Annou koumans enn partenarya solid ki amenn vre rezilta.",
+    "title": "Pare Pou Grandi To Mark ou to Non ?",
+    "subtitle": "Rezwenn nou lor nou platform azordi mem. Anou koumans enn partenarya solid ki amenn vre rezilta.",
     "buttonText": "Anrezistre Aster la mem"
   },
   "footer": {
