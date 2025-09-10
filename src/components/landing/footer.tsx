@@ -15,10 +15,10 @@ import { FeedbackForm } from './feedback-form';
 
 export function Footer({ content, lang }: { content: any, lang: Locale }) {
 
-  const renderLink = (link: any) => {
+  const renderLink = (link: any, index: number) => {
     if (link.name === 'Contact') {
       return (
-        <Dialog>
+        <Dialog key={index}>
           <DialogTrigger asChild>
             <button className="text-muted-foreground hover:text-foreground text-left">{link.name}</button>
           </DialogTrigger>
@@ -35,7 +35,7 @@ export function Footer({ content, lang }: { content: any, lang: Locale }) {
       );
     }
     
-    const href = link.href.startsWith('#')
+    const href = link.href.startsWith('#') || link.href === '/'
       ? `/${lang}${link.href}`
       : `/${lang}${link.href}`;
 
