@@ -19,7 +19,7 @@ export default async function LangLayout({
       <BetaWelcomeDialog lang={params.lang} content={dictionary.betaWelcome} />
       <Header lang={params.lang} navigation={dictionary.navigation} auth={dictionary.navigation.auth} />
       {children}
-      <Footer content={dictionary.footer} />
+      <Footer lang={params.lang} content={dictionary.footer} />
     </>
   );
 }

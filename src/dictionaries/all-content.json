@@ -147,24 +147,24 @@
         "product": {
           "title": "Product",
           "links": [
-            { "name": "Features", "href": "#features" },
-            { "name": "Pricing", "href": "#pricing" },
-            { "name": "Testimonials", "href": "#testimonials" }
+            { "name": "Features", "href": "/#features" },
+            { "name": "Pricing", "href": "/#pricing" },
+            { "name": "Testimonials", "href": "/#testimonials" }
           ]
         },
         "company": {
           "title": "Company",
           "links": [
-            { "name": "About Us", "href": "#what-we-are" },
-            { "name": "Careers", "href": "#" },
+            { "name": "About Us", "href": "/#what-we-are" },
+            { "name": "Careers", "href": "/jobs" },
             { "name": "Contact", "href": "#" }
           ]
         },
         "legal": {
           "title": "Legal",
           "links": [
-            { "name": "Privacy Policy", "href": "#" },
-            { "name": "Terms of Service", "href": "#" }
+            { "name": "Privacy Policy", "href": "/privacy-policy" },
+            { "name": "Terms of Service", "href": "/tos" }
           ]
         }
     },
