@@ -7,7 +7,7 @@ import { MainContent } from '@/components/creators/main-content';
 import { PastCampaigns } from '@/components/brands/past-campaigns';
 import { Separator } from '@/components/ui/separator';
 
-export default function BrandProfilePage({ params }: { params: { id: string } }) {
+export default function BrandProfilePage({ params }: { params: { id: string, lang: string } }) {
   const brand = brands.find((b) => b.id.toString() === params.id);
 
   if (!brand) {

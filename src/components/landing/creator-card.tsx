@@ -1,4 +1,6 @@
 
+"use client";
+
 import Image from 'next/image';
 import { type CreatorProfile } from '@/lib/creator-data';
 import { Badge } from '@/components/ui/badge';
