@@ -1,4 +1,6 @@
 
+"use client";
+
 import { Button } from '@/components/ui/button';
 import { jobs } from '@/lib/job-data';
 import { JobCard } from './job-card';
