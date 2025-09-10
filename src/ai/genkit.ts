@@ -1,16 +1,19 @@
-import {genkit} from 'genkit';
-import {googleAI} from '@genkit-ai/googleai';
-import {devLocalVectorstore} from '@genkit-ai/dev-local-vectorstore';
+// src/ai/genkit.ts
+import { genkit } from 'genkit';
+import { googleAI } from '@genkit-ai/googleai';
+import { devLocalVectorstore } from '@genkit-ai/dev-local-vectorstore';
 
 export const ai = genkit({
   plugins: [
-    googleAI(),
+    googleAI(), // reads GEMINI_API_KEY / GOOGLE_API_KEY
     devLocalVectorstore([
       {
         indexName: 'knowledge-base',
-        embedder: 'googleai/embedding-004',
+        // Pass a typed embedder ref from the plugin (avoids typos)
+        embedder: googleAI.embedder('text-embedding-004'),
       },
     ]),
   ],
-  model: 'googleai/gemini-2.5-flash',
+  // Also use the typed model ref:
+  model: googleAI.model('gemini-2.5-flash'),
 });

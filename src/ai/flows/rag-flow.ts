@@ -1,144 +1,152 @@
-'use server';
+// src/ai/flows/rag-flow.ts
+import 'server-only';
 
 /**
- * @fileOverview A flow that uses Retrieval-Augmented Generation (RAG)
- * to answer questions based on a knowledge base of markdown files.
- * This flow initializes a vector store with the contents of the files,
- * retrieves relevant documents based on a user's query, and then
- * uses an AI model to generate an answer from that context.
+ * Retrieval-Augmented Generation (RAG) flow over local markdown knowledge base.
+ * - Indexes ./public/knowledgeBase/*.md into dev-local vectorstore on startup
+ * - Retrieves top-k chunks and answers with a code-defined prompt
  */
 
-import {ai} from '@/ai/genkit';
-import {devLocalIndexerRef, devLocalRetrieverRef} from '@genkit-ai/dev-local-vectorstore';
-import {Document, defineFlow, definePrompt} from 'genkit';
-import {z} from 'zod';
+import { ai } from '@/ai/genkit';
+import { devLocalIndexerRef, devLocalRetrieverRef } from '@genkit-ai/dev-local-vectorstore';
+import { Document } from 'genkit/retriever';
+import { z } from 'zod';
 import * as fs from 'fs/promises';
 import * as path from 'path';
 
-// Define the schema for the flow's input (the user's question).
+// ---------- Schemas ----------
 export const RagInputSchema = z.object({
   query: z.string(),
 });
 export type RagInput = z.infer<typeof RagInputSchema>;
 
-// Define the schema for the flow's output.
 export const RagOutputSchema = z.object({
   answer: z.string(),
   sources: z.array(z.string()),
 });
 export type RagOutput = z.infer<typeof RagOutputSchema>;
 
-// Get references to the local indexer and retriever configured in genkit.ts.
+// ---------- Vector store refs ----------
 const indexer = devLocalIndexerRef('knowledge-base');
 const retriever = devLocalRetrieverRef('knowledge-base');
 
-/**
- * Indexes the documents from the knowledge base into the local vector store.
- * This is designed to be called once when the application starts.
- */
-async function indexKnowledgeBase() {
-  const knowledgeBaseDir = path.resolve('./public/knowledgeBase');
+// ---------- Index knowledge base (run at startup) ----------
+export async function indexKnowledgeBase() {
+  const knowledgeBaseDir = path.resolve(process.cwd(), 'public/knowledgeBase');
+
   try {
     const files = await fs.readdir(knowledgeBaseDir);
-    const markdownFiles = files.filter(file => file.endsWith('.md'));
+    const markdownFiles = files.filter((f) => f.endsWith('.md'));
 
     if (markdownFiles.length === 0) {
-      console.log('No markdown files found in knowledge base.');
+      console.log('[RAG] No markdown files found in knowledge base.');
       return;
     }
 
-    console.log(`Found ${markdownFiles.length} files to index.`);
+    console.log(`[RAG] Found ${markdownFiles.length} files to index.`);
 
     const documents = await Promise.all(
-      markdownFiles.map(async file => {
+      markdownFiles.map(async (file) => {
         const filePath = path.join(knowledgeBaseDir, file);
         const content = await fs.readFile(filePath, 'utf-8');
         return Document.fromText(content, {
           source: file,
-          filePath: filePath,
+          filePath,
         });
       })
     );
 
-    await ai.index({
-      indexer,
-      documents,
-    });
-
-    console.log('Knowledge base indexed successfully.');
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === 'ENOENT') {
-      console.log('Knowledge base directory not found. Skipping indexing.');
+    await ai.index({ indexer, documents });
+    console.log('[RAG] Knowledge base indexed successfully.');
+  } catch (error: any) {
+    if (error?.code === 'ENOENT') {
+      console.log('[RAG] Knowledge base directory not found; skipping indexing.');
     } else {
-      console.error('Error indexing knowledge base:', error);
+      console.error('[RAG] Error indexing knowledge base:', error);
     }
   }
 }
 
-// Immediately invoke the indexing function when the server starts.
-// The await here ensures that indexing completes before the app proceeds.
+// Run once on module load (server-only)
 await indexKnowledgeBase();
 
-// Define the prompt that will be used to generate answers.
-// It takes the user's query and the retrieved documents as context.
-const ragPrompt = definePrompt(
-  {
-    name: 'ragPrompt',
-    inputSchema: z.object({
+// ---------- Helpers ----------
+/** Genkit content is an array of parts (e.g., { text }), flatten to a single string. */
+function contentToText(content: unknown): string {
+  if (Array.isArray(content)) {
+    return content
+      .map((p: any) => (p && typeof p.text === 'string' ? p.text : ''))
+      .filter(Boolean)
+      .join('\n')
+      .trim();
+  }
+  if (typeof content === 'string') return content.trim();
+  return '';
+}
+
+// ---------- Prompt (code-defined) ----------
+const ragPrompt = ai.definePrompt({
+  name: 'ragPrompt',
+  model: 'googleai/gemini-2.5-flash',
+  input: {
+    schema: z.object({
       query: z.string(),
       context: z.array(z.string()),
     }),
-    prompt: `You are an expert Social Media Marketing consultant.
-    Your name is Tadeo.
-    Your knowledge is strictly limited to the information provided in the context below.
-    Do not answer any questions or requests that are not related to the context.
-    If the context does not contain the answer, say "I'm sorry, I don't have enough information to answer that."
+  },
+  prompt: `You are an expert Social Media Marketing consultant.
+Your name is Tadeo.
+Your knowledge is strictly limited to the information provided in the context below.
+Do not answer any questions or requests that are not related to the context.
+If the context does not contain the answer, say "I'm sorry, I don't have enough information to answer that."
 
-    Context:
-    {{#each context}}
-    {{this}}
-    ---
-    {{/each}}
+Context:
+{{#each context}}
+{{this}}
+---
+{{/each}}
 
-    User Query: {{{query}}}
+User Query: {{{query}}}
 
-    Answer:`,
-  }
-);
+Answer:`,
+});
 
-
-// Define the main RAG flow.
-export const askKnowledgeBase = defineFlow(
+// ---------- Flow ----------
+export const askKnowledgeBase = ai.defineFlow(
   {
     name: 'askKnowledgeBase',
     inputSchema: RagInputSchema,
     outputSchema: RagOutputSchema,
   },
-  async ({query}) => {
-    // Retrieve relevant documents from the vector store based on the user's query.
-    const context = await ai.retrieve({
+  async ({ query }) => {
+    // Retrieve top-k relevant chunks
+    const docs = await ai.retrieve({
       retriever,
       query,
-      options: {
-        limit: 3, // Retrieve the top 3 most relevant document chunks.
-      },
+      options: { k: 3 }, // top-k
     });
 
-    // Generate an answer using the AI model, providing the retrieved context.
-    const {output} = await ragPrompt({
+    const contextStrings = docs
+      .map((d) => contentToText(d.content))
+      .filter((s) => s.length > 0);
+
+    const { output } = await ragPrompt({
       query,
-      context: context.map(d => d.content),
+      context: contextStrings,
     });
 
-    // Extract the source filenames from the retrieved documents' metadata.
-    const sources = context.map(doc => doc.metadata?.source as string).filter(Boolean);
-    
-    // Remove duplicate source filenames.
-    const uniqueSources = [...new Set(sources)];
+    // Unique source filenames from metadata
+    const sources = Array.from(
+      new Set(
+        docs
+          .map((d) => (d.metadata?.source as string) || '')
+          .filter(Boolean)
+      )
+    );
 
     return {
-      answer: output!,
-      sources: uniqueSources,
+      answer: output ?? '',
+      sources,
     };
   }
 );
