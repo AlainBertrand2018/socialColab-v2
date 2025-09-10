@@ -203,7 +203,10 @@
         }
       ]
     }
+  },
+  "betaWelcome": {
+    "title": "Bienvini lor Social Colab Beta!",
+    "description": "Nou bien kontan ki ou la! Zis pou informe ki nou platform aktyelman anba test beta. Nou pe travay for pou ameyor servis la ek ou feedback bien presie pou nou.<br /><br />Pou rezon test, konteni ki ou pe truve la finn eter zennere ar fos done. Nou pou azout bann vre dimounn ek mark la mezir ki zot anrezistre.",
+    "buttonText": "Bienvini"
   }
 }
-
-  

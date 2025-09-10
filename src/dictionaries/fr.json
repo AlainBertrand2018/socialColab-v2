@@ -1,3 +1,4 @@
+
 {
     "navigation": {
       "navLinks": [
@@ -44,6 +45,11 @@
             { "name": "Conditions d'utilisation", "href": "#" }
           ]
         }
-      }
+    },
+    "betaWelcome": {
+      "title": "Bienvenue sur la Bêta de Social Colab !",
+      "description": "Nous sommes ravis de vous accueillir ! Veuillez noter que notre plateforme est actuellement en phase de test bêta. Nous travaillons activement à l'amélioration du service et vos retours nous sont précieux.<br /><br />À des fins de test, le contenu que vous voyez est généré avec des données fictives. Nous intégrerons de vraies personnes et marques au fur et à mesure de leur inscription.",
+      "buttonText": "Bienvenue"
+    }
   }
   

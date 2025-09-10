@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Lightbulb } from 'lucide-react';
 import { Locale } from '@/i18n.config';
 
-export function BetaWelcomeDialog({ lang }: { lang: Locale }) {
+export function BetaWelcomeDialog({ lang, content }: { lang: Locale, content: any }) {
   const [isOpen, setIsOpen] = useState(false);
   const dialogKey = `hasSeenBetaDialog-${lang}`;
 
@@ -30,15 +30,15 @@ export function BetaWelcomeDialog({ lang }: { lang: Locale }) {
             <div className="flex justify-center mb-4">
                 <Lightbulb className="h-12 w-12 text-accent" />
             </div>
-          <DialogTitle className="text-center text-2xl font-headline">Welcome to Social Colab Beta!</DialogTitle>
-          <DialogDescription className="text-center text-base py-4 space-y-2">
-            We're excited to have you here! Please note that our platform is currently in beta testing. We are actively working to improve the service and your feedback is invaluable to us.
-            <br /><br />
-            For testing purposes, the content you see is generated with mock data. We will be integrating real people and brands as they sign up.
+          <DialogTitle className="text-center text-2xl font-headline">{content.title}</DialogTitle>
+          <DialogDescription 
+            className="text-center text-base py-4 space-y-2"
+            dangerouslySetInnerHTML={{ __html: content.description }}
+          >
           </DialogDescription>
         </DialogHeader>
         <div className="flex justify-center">
-            <Button onClick={handleClose} size="lg">Welcome</Button>
+            <Button onClick={handleClose} size="lg">{content.buttonText}</Button>
         </div>
       </DialogContent>
     </Dialog>

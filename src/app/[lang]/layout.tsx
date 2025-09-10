@@ -1,3 +1,4 @@
+
 import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
 import { getDictionary } from '@/lib/dictionaries';
@@ -15,7 +16,7 @@ export default async function LangLayout({
 
   return (
     <>
-      <BetaWelcomeDialog lang={params.lang} />
+      <BetaWelcomeDialog lang={params.lang} content={dictionary.betaWelcome} />
       <Header navigation={dictionary.navigation} auth={dictionary.navigation.auth} />
       {children}
       <Footer content={dictionary.footer} />
