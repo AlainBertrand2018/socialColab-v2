@@ -5,19 +5,21 @@ import { useState, useEffect } from 'react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Lightbulb } from 'lucide-react';
+import { Locale } from '@/i18n.config';
 
-export function BetaWelcomeDialog() {
+export function BetaWelcomeDialog({ lang }: { lang: Locale }) {
   const [isOpen, setIsOpen] = useState(false);
+  const dialogKey = `hasSeenBetaDialog-${lang}`;
 
   useEffect(() => {
-    const hasSeenDialog = localStorage.getItem('hasSeenBetaDialog');
+    const hasSeenDialog = localStorage.getItem(dialogKey);
     if (!hasSeenDialog) {
       setIsOpen(true);
     }
-  }, []);
+  }, [dialogKey]);
 
   const handleClose = () => {
-    localStorage.setItem('hasSeenBetaDialog', 'true');
+    localStorage.setItem(dialogKey, 'true');
     setIsOpen(false);
   };
 
